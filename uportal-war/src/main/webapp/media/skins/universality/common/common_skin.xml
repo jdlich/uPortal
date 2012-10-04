@@ -24,29 +24,6 @@
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="http://www.jasig.org/uportal/web/skin https://source.jasig.org/schemas/resource-server/skin-configuration/skin-configuration-v1.2.xsd">
   
-  <!-- For printing of portal pages. Common to all skins using the universality theme -->
-  <css>css/print.css</css>
-  
-  <!-- For layout of portal pages. Common to all skins using the universality theme. -->
-  <css>css/layout-portal.css</css>
-    
-  <!-- Support for the JSR-168 portlet specficiation. Common to all skins using the universality theme. -->
-  <css>css/jsr168.css</css>
-  
-  <!-- uPortal portlet CSS contributed to the Fluid Project. Now importing from Fluid Infusion. Local overrides can be made in portlet.css.
-  <css resource="true">/rs/fluid/1.4-bea0041/fss/css/fss-layout-portlet.css</css>
-  <css resource="true">/rs/fluid/1.4-bea0041/fss/css/fss-theme-portlet.css</css> -->
-    
-  <!-- For layout of portlet content. Common to all skins using the universality theme. -->
-  <css>css/layout-portlet.css</css>
-  
-  <!-- Default visual style for portlet content. -->
-  <css>css/portlet.css</css>
-
-  <!-- Styles for the tokeninput jQuery plugin. -->
-  <css>css/token-input.css</css>
-
-
   <js included="plain" resource="true">/rs/jquery/1.6.4/jquery-1.6.4.js</js>
   <js included="aggregated" resource="true">/rs/jquery/1.6.4/jquery-1.6.4.min.js</js>
   
