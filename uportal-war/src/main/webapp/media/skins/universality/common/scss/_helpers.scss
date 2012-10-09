@@ -28,3 +28,17 @@
     content: "" !important;
   }
 }
+
+@mixin links($color, $hover-color) {
+  a {
+    text-decoration: none;
+    
+    &:link,
+    &:visited {
+      color: $color;
+    }
+    &:hover {
+      color: $hover-color;
+    }
+  }
+}

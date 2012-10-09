@@ -209,3 +209,27 @@
   }
 }
 
+// Footer
+#portalPageFooter {
+  background: #282d33;
+  color: #767676;
+  @include links(#a9a9a9, #699bc4);
+}
+#portalPageFooterNav {
+  background: #1E2126;
+}
+#portalPageFooterNav div > a {
+  color: #FFFFFF;
+}
+#portalPageFooterLinks {
+  @include links(#FFFFFF, #699bc4);
+  font-weight: bold;
+}
+#portalProductAndVersion {
+  background: transparent url("../common/images/portal_poweredby.png") no-repeat top left;
+}
+#portalProductAndVersion,
+#portalCopyright,
+#silkIconsAttribution {
+  padding-left: 120px;
+}

@@ -1,0 +1,32 @@
+#portalPageFooter {
+  font-size: 80%;
+}
+#portalPageFooter p {
+  margin-bottom: 0;
+}
+#portalPageFooterContent {
+  margin: 0 auto;
+  padding: 25px;
+}
+#portalPageFooterLinks {
+  margin: 0 0 2em 0;
+}
+
+#portalPageFooterNav {
+  padding: 25px;
+}
+#portalPageFooterNav div > a {
+  // list headings...
+  font-weight: bold;
+}
+#portalPageFooterNav .fl-col {
+  margin-left: 0;
+  margin-right: 0.50%;
+  padding: 0;
+}
+#portalPageFooterNav ul {
+  margin: 0;
+}
+#portalPageFooterNav ul li {
+  list-style: none;
+}
