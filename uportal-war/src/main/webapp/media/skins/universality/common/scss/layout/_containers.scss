@@ -1,0 +1,49 @@
+#portalPage {
+  width: 96%;
+  min-width: 960px;
+  margin: 0 auto;
+}
+#portalPageBodyInner {
+  padding: 1.2em 25px 2.5em 25px;
+}
+#portalPageHeader {
+  position: relative;
+}
+// the page top is a section above the portlet content
+// and is where the portal tips currently lives
+#portalContentTopBlock {}
+
+// container in header used predominantly for the alert portlet
+#portalHeaderBlock {
+  background: #CCCCCC;
+  
+  .view-alert {
+    padding-top: 0;
+  }
+}
+
+/* Columns */
+.portal-page-column {
+  float: left;
+  display: inline;
+}
+.portal-page-column-inner {
+  padding-bottom: 1em;
+  min-height: 100px;
+}
+.columns-1 .column-1 {
+  width: 100%;
+}
+.columns-2 .column-1 .portal-page-column-inner,
+.columns-3 .column-1 .portal-page-column-inner,
+.columns-4 .column-1 .portal-page-column-inner,
+.columns-3 .column-2 .portal-page-column-inner,
+.columns-4 .column-2 .portal-page-column-inner,
+.columns-4 .column-3 .portal-page-column-inner {
+  margin-right: 5px; 
+}
+.columns-2 .column-2 .portal-page-column-inner,
+.columns-3 .column-3 .portal-page-column-inner,
+.columns-4 .column-4 .portal-page-column-inner {
+  margin-left: 5px;
+}

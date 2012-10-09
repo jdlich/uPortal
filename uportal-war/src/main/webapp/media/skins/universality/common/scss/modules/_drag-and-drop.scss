@@ -1,0 +1,137 @@
+.fl-reorderer-movable-hover {
+  /* Affordance to indicate draggable. */
+  cursor: move;
+}
+.fl-reorderer-movable-dragging-mouse {
+  /* When the item is being moved, hide the original. */
+  display: none;
+}
+.fl-reorderer-avatar {
+  /* See-through avatar (copy) of the item being dragged. */
+  background-color: white;
+  border: 1px dotted #a9a9a9;
+  width: auto; 
+  filter: alpha(opacity=60); 
+  opacity: .6;
+}
+.fl-reorderer-movable-dragging {
+  filter:alpha(opacity=50); opacity:.5;
+}
+.fl-reorderer-movable-selected {
+    outline-color: #F68922;
+}
+.fl-reorderer-movable-selected,
+.fl-reorderer-movable-selected:focus,
+.fl-reorderer-movable-dragging:focus {
+  /* keyboard layout reorder focus outline */
+  outline: 2px solid #f58821;
+}
+.fl-reorderer-header-movable-selected:focus,
+.fl-reorderer-header-movable-dragging:focus,
+.fl-reorderer-sidebar-movable-selected:focus,
+.fl-reorderer-sidebar-movable-dragging:focus {
+  outline: none;
+}
+.fl-reorderer-dropMarker {
+  /* Indicate where the item may be dropped. */
+  background-color: #f58821;
+  border: 2px dashed #a85608;
+  height: 200px;
+  margin-bottom: 1em;
+}
+.drop-warning {
+  /* Warning message that indicates that an item cannot be moved into a position due to locked (unmovable) items. */
+  border: 2px solid #660000;
+  background: #cc0000;
+  color: white;
+  position:absolute; 
+  top:50px; 
+  left:10px; 
+  display:none; 
+  padding:10px; 
+  margin:5px; 
+  z-index:65535;
+}
+.drop-warning p {
+  margin: 0em; 
+  padding: 0.5em 1em;
+}
+
+//---------------------------------------------------------
+
+/* Fluid Layout Customizer (Header: drag and drop) */
+/* Avatar Icons (common) */
+.fl-reorderer-header-avatar .portal-navigation-delete,
+.fl-reorderer-header-avatar .portal-navigation-gripper {
+  display: block;
+  position: absolute; 
+  padding: 0; 
+  border: none; 
+  text-decoration: none;
+}
+.fl-reorderer-header-avatar .portal-navigation-delete,
+.fl-reorderer-header-avatar .portal-navigation-delete span,
+.fl-reorderer-header-avatar .portal-navigation-gripper,
+.fl-reorderer-header-avatar .portal-navigation-gripper span {
+  display: block; 
+  width: 16px; 
+  height: 16px; 
+  overflow: hidden;
+}
+.fl-reorderer-header-avatar .portal-navigation-delete span,
+.fl-reorderer-header-avatar .portal-navigation-gripper span {
+  visibility: hidden;
+}
+.fl-reorderer-header-avatar {
+  /* An avatar of the original tab being dragged during drag and drop. */
+  display: inline;
+  position: relative; 
+  padding: 5px 20px 5px 20px; 
+  cursor: pointer; 
+  border: 2px solid #F68922; 
+  filter:alpha(opacity=70); 
+  opacity:.7;
+  background-color: black;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0px, 0px, 4px, #333333;
+  -webkit-box-shadow: 0px, 0px, 4px, #333333;
+  box-shadow: 0px, 0px, 4px, #333333;
+}
+.fl-reorderer-header-avatar .portal-navigation-link {
+  color: #222222 !important; 
+  text-decoration: none;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.fl-reorderer-header-avatar .portal-navigation-delete {
+  top: 0px; 
+  right: 0px; 
+  cursor: pointer; 
+  background: transparent url("../common/images/remove.png") 0px 0px no-repeat;
+}
+.fl-reorderer-header-avatar .portal-navigation-gripper {
+  top: 0px; 
+  left: 0px; 
+  cursor: move; 
+  background: transparent url("../common/images/gripper.png") 0px 0px no-repeat;
+}
+.fl-reorderer-header-avatar .portal-flyout-container {
+  display: none !important;
+}
+.fl-reorderer-header-dropMarker { 
+  float:left; 
+  display: block; 
+  border: 1px solid #d26600 !important; 
+  background-color: #F68922 !important; 
+  margin: 0 2px !important; 
+  filter:alpha(opacity=80) !important; 
+  opacity:.8 !important; 
+  padding: .5em .31em !important; 
+  *display: inline !important; 
+  *height: 10px; 
+  *padding: 0em .13em !important; 
+  *zoom: 1 !important;
+}

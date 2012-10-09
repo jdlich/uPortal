@@ -1,0 +1,10 @@
+#portalLogin {
+  width: 10em;
+  position: absolute;
+  top: 1.5em;
+  right: 25px;
+  @include strip-fl-widget();
+}
+#portalLogin .fl-widget-content {
+  text-align: center;
+}

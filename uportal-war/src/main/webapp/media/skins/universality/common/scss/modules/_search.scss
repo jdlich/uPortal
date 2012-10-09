@@ -1,0 +1,10 @@
+#webSearchContainer {
+  position: absolute;
+  top: 4em;
+  right: 25px;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  @include strip-fl-widget();
+}

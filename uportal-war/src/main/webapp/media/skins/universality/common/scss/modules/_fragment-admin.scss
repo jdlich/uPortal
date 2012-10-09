@@ -1,0 +1,28 @@
+#fragmentAdminForm {
+  margin: 0;
+  padding: 0;
+}
+#portalFragAdminExit {
+  padding: 0.5em 1em;
+  margin: 0;
+}
+#portalFragAdminExit h2,
+#portalFragAdminExit .block-content,
+#portalFragAdminExit form {
+  display: inline;
+}
+#portalFragAdminExit h2 { 
+  padding-right: 1em;
+}
+#portalFragAdminExit #exitFragment {
+  margin-left: 1em;
+  padding: 0.3em 1em;
+  float: right;
+}
+.fragment-disabled .add-fragment-link { 
+  display: none;
+}
+.fragment-disabled, 
+.fragment-disabled h2.fragment-title {
+  color: #8f8f8f;
+}
