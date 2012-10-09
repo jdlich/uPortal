@@ -8,3 +8,10 @@
   border: none;
   @include strip-fl-widget();
 }
+#webSearchInput {
+  margin: 0;
+}
+#webSearchInput,
+#webSearchSubmit {
+  float: left;
+}

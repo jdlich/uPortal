@@ -1,4 +1,3 @@
-// fl-theme-mist
 body { 
   border-color: #4070a1;
 }
@@ -34,19 +33,6 @@ span input {
 button, 
 input[type='submit'], 
 input[type='button'] {
-  display: inline;
-  margin: 0;
-  padding: 0.3em 15px 0.4em 15px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #555555;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 12px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: capitalize;
-  cursor: pointer;
   -moz-border-radius: 0.6em;
   -webkit-border-radius: 0.6em;
   border-radius: 0.6em;
@@ -71,43 +57,16 @@ input[type='button'] {
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#8db3d3', EndColorStr='#294d6b')";
     background-image: linear-gradient(top, #8db3d3, #294d6b);
   }
-  &:focus {
+  &:active {
     border-color: #294d6b;
-    background: #38678f;
+    background: #4682b4;
     color: white;
     text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
-    background-image: -moz-linear-gradient(top, #294d6b, #4682b4);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #294d6b), color-stop(1, #4682b4));
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#294d6b', EndColorStr='#4682b4')";
-    background-image: linear-gradient(top, #294d6b, #4682b4);
+    background-image: -moz-linear-gradient(top, #4682b4, #294d6b);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4682b4), color-stop(1, #294d6b));
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#4682b4', EndColorStr='#294d6b')";
+    background-image: linear-gradient(top, #4682b4, #294d6b);
   }
-}
-a.button {
-  display: inline-block;
-}
-.button[disabled='disabled'],
-button[disabled='disabled'],
-input[disabled='disabled'], 
-input[disabled='disabled']:hover, 
-input[disabled='disabled']:focus {
-  background: #dcdcdc !important;
-  border-color: #a9a9a9 !important;
-  color: #a9a9a9 !important;
-  text-shadow: none !important;
-  cursor: default !important;
-}
-.button.active, 
-button.active, 
-input[type='submit'].active, 
-input[type='button'].active {
-  border-color: #294d6b;
-  background: #4682b4;
-  color: white;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
-  background-image: -moz-linear-gradient(top, #4682b4, #294d6b);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4682b4), color-stop(1, #294d6b));
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#4682b4', EndColorStr='#294d6b')";
-  background-image: linear-gradient(top, #4682b4, #294d6b);
 }
 
 /* Form styles.

@@ -1,0 +1,28 @@
+.button {
+  display: inline-block;
+  line-height: 1;
+  margin: 0;
+  padding: 7px 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #555555;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.button[disabled='disabled'],
+.button[disabled='disabled']:hover {
+  background: #dcdcdc;
+  border-color: #a9a9a9;
+  color: #a9a9a9;
+  text-shadow: none;
+  cursor: default;
+}
+
+input[type='submit'] {
+  @extend .button;
+}

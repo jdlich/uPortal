@@ -83,9 +83,6 @@
   }
 }
 
-#webSearchInput {
-  margin: 0;
-}
 #webSearchInput,
 #webSearchSubmit {
   color: #444444;
@@ -116,7 +113,6 @@
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4682b4), color-stop(1, #294d6b));
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#4682b4', EndColorStr='#294d6b')";
   background-image: linear-gradient(top, #4682b4, #294d6b);
-  padding: 0.3em 12px;
   -moz-border-radius: 0 0.6em 0.6em 0;
   -webkit-border-top-left-radius: 0;
   -webkit-border-top-right-radius: 0.6em;
