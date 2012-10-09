@@ -1,3 +1,26 @@
+@import "../../common/scss/helpers";
 @import "../../common/scss/base";
 @import "../../common/scss/layout/containers";
+@import "../../common/scss/modules/skip-links";
+@import "../../common/scss/modules/login";
+@import "../../common/scss/modules/welcome";
+@import "../../common/scss/modules/logo";
+@import "../../common/scss/modules/search";
+@import "../../common/scss/modules/page-bar";
 @import "../../common/scss/modules/gallery";
+@import "../../common/scss/modules/customize-page";
+@import "../../common/scss/modules/page-title";
+@import "../../common/scss/modules/breadcrumbs";
+@import "../../common/scss/modules/drag-and-drop";
+@import "../../common/scss/modules/fragment-admin";
+@import "../../common/scss/modules/page-permissions";
+@import "../../common/scss/modules/portlet";
+
+@import "base";
+@import "navigation";
+@import "sidebar";
+@import "portlet";
+@import "footer";
+@import "uportal3";
+
+

@@ -1,0 +1,252 @@
+
+// ------------------------------------------------------------------------------------
+// dumped from layout-portal
+
+.fl-tabs li a {
+  background: transparent;
+  border: none;
+  margin: 0;
+  color: #333;
+}
+
+/* Navigation */
+#portalNavigationInner {position: relative;}
+/* Navigation: Icons (common) */
+#portalNavigation .portal-navigation-gripper { display: none }
+#portalNavigation .portal-navigation-add,
+#portalNavigation .portal-navigation-delete,
+#portalNavigation .active .portal-navigation-gripper {display: block; position: absolute; text-decoration: none; border: none;}
+#portalNavigation .portal-navigation-add{ position:static }
+#portalNavigation .portal-navigation-add:hover,
+#portalNavigation .portal-navigation-delete:hover {background-position: 0px -16px;}
+#portalNavigation .portal-navigation-delete,
+#portalNavigation .portal-navigation-delete span,
+#portalNavigation .active .portal-navigation-gripper,
+#portalNavigation .active .portal-navigation-gripper span {display: block; width: 16px; height: 16px; overflow: hidden;}
+#portalNavigation .portal-navigation-delete span,
+#portalNavigation .active .portal-navigation-gripper span {visibility: hidden;}
+#portalNavigation .portal-navigation-add {top: 1px; right: 2em;  padding:0px 0px 0px 16px;}
+#portalNavigation .active .portal-navigation-gripper {top: 0px; left: 0px; cursor: move; background: transparent url("../images/gripper.png") 0px 0px no-repeat; padding: 0;}
+#portalNavigation .portal-navigation-delete {top: 0px; right: 0px; cursor: pointer; background: transparent url("../images/remove.png") 0px 0px no-repeat; padding: 0;}
+/* Navigation: Subrow */
+#portalNavigationSubrow {padding:0.5em 0;}
+.sidebar-left-100 #portalNavigationSubrow ul {margin-left:120px;}
+.sidebar-left-150 #portalNavigationSubrow ul {margin-left:170px;}
+.sidebar-left-200 #portalNavigationSubrow ul {margin-left:220px;}
+.sidebar-left-250 #portalNavigationSubrow ul {margin-left:270px;}
+.sidebar-left-300 #portalNavigationSubrow ul {margin-left:320px;}
+.sidebar-right-100 #portalNavigationSubrow ul {margin-right:120px;}
+.sidebar-right-150 #portalNavigationSubrow ul {margin-right:170px;}
+.sidebar-right-200 #portalNavigationSubrow ul {margin-right:220px;}
+.sidebar-right-250 #portalNavigationSubrow ul {margin-right:270px;}
+.sidebar-right-300 #portalNavigationSubrow ul {margin-right:320px;}
+#portalNavigationSubrow li {list-style-type:none; display:inline;}
+#portalNavigationSubrow a {padding:0em 1em;}
+/* Navigation: Flyout */
+#portalNavigation .portal-flyout-container {width: 200px; position: absolute; z-index: 100000; display: none;}
+#portalNavigation .portal-flyout-container .portal-subnav-list {margin: 0;}
+#portalNavigation .portal-flyout-container .portal-subnav-list li {display: list-item; position: static; padding: 0; list-style: none;}
+#portalNavigation .portal-flyout-container .portal-subnav-list li a {display: block; padding:0.7em 2em;}
+#portalNavigation .portal-flyout-container .portal-subnav-list li:first-child a {border:none;}
+#portalNavigation .portal-flyout-iframe {position:absolute; z-index:9;}
+/* Navigation: Flyout (Fix for IE7) */
+.on-top {z-index:1000000;}
+/* Navigation: Flyout (Legacy) */
+#portalNavigation .portal-flyout-container .portal-subnav-list #movePageLeftLink,
+#portalNavigation .portal-flyout-container .portal-subnav-list #movePageRightLink,
+#portalNavigation .portal-flyout-container .portal-subnav-list #editPageLink,
+#portalNavigation .portal-flyout-container .portal-subnav-list #deletePageLink {display: none;}
+#portalNavigation .movable .portal-subnav-list #movePageLeftLink,
+#portalNavigation .movable .portal-subnav-list #movePageRightLink,
+#portalNavigation .editable .portal-subnav-list #editPageLink,
+#portalNavigation .deletable .portal-subnav-list #deletePageLink {display: list-item;}
+
+
+// ------------------------------------------------------------------------------------
+// scss
+
+#portalNavigation {
+  /* Main Navigation, rendered as a row of tabs. */
+  background: #282d33;
+  background-image: -moz-linear-gradient(top, #3e4650, #121416);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #3e4650), color-stop(1, #121416));
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#3e4650', EndColorStr='#121416')";
+  background-image: linear-gradient(top, #3e4650, #121416);
+}
+#portalNavigation #portalNavigationList {
+  text-align: left;
+  border: none;
+  margin: 0 0 0 25px;
+  padding: 0;
+  zoom: 1;
+}
+#portalNavigation #portalNavigationList:before, #portalNavigation #portalNavigationList:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+#portalNavigation #portalNavigationList:after {
+  clear: both;
+}
+#portalNavigation .portal-navigation {
+  /* Each tab list item. */
+  float: left;
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+  background: #282d33;
+  background-image: -moz-linear-gradient(top, #282d33, #3e4650, #3e4650 50%, #121416 0%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#282d33), to(#3e4650), color-stop(0.5, #3e4650), color-stop(0.5, #121416));
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#282d33', EndColorStr='#121416')";
+  background-image: linear-gradient(top, #282d33, #3e4650, #3e4650 50%, #121416 0%);
+}
+#portalNavigation .portal-navigation .portal-navigation-link {
+  /* Anchor tag within the list item. */
+  display: block;
+  color: white;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+  font-weight: bold;
+}
+#portalNavigation .portal-navigation .portal-navigation-link, #portalNavigation .portal-navigation .fl-inlineEditContainer {
+  padding: 8px 20px;
+}
+#portalNavigation .portal-navigation:hover, #portalNavigation .portal-navigation:focus {
+  /* Tab hover. */
+  background: #3e4650;
+  background-image: -moz-linear-gradient(top, #3e4650, #6b7989, #6b7989 50%, #282d33 0%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3e4650), to(#6b7989), color-stop(0.5, #6b7989), color-stop(0.5, #282d33));
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#3e4650', EndColorStr='#282d33')";
+  background-image: linear-gradient(top, #3e4650, #6b7989, #6b7989 50%, #282d33 0%);
+}
+#portalNavigation .portal-navigation:hover .portal-navigation-link, #portalNavigation .portal-navigation:focus .portal-navigation-link {
+  /* Anchor tag within the list item. */
+  color: white;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
+}
+#portalNavigation .active {
+  /* Active tab. */
+  background: #f58821;
+  background-image: -moz-linear-gradient(top, #f58821, #f7a252, #f7a252 50%, #d96f0a 0%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f58821), to(#f7a252), color-stop(0.5, #f7a252), color-stop(0.5, #d96f0a));
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#f58821', EndColorStr='#d96f0a')";
+  background-image: linear-gradient(top, #f58821, #f7a252, #f7a252 50%, #d96f0a 0%);
+}
+#portalNavigation .active .portal-navigation-link {
+  color: white;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
+}
+#portalNavigation .active:hover {
+  /* Active tab hover. */
+  background: #f7a252;
+  background-image: -moz-linear-gradient(top, #f7a252, #fcd6b3, #fcd6b3 50%, #f58821 0%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f7a252), to(#fcd6b3), color-stop(0.5, #fcd6b3), color-stop(0.5, #f58821));
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#f7a252', EndColorStr='#f58821')";
+  background-image: linear-gradient(top, #f7a252, #fcd6b3, #fcd6b3 50%, #f58821 0%);
+}
+#portalNavigation .active:hover .portal-navigation-link {
+  color: white;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
+}
+#portalNavigation .portal-flyout-container {
+  /* Flyout menus. */
+  background: #282d33;
+  background-image: -moz-linear-gradient(top, false, false);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, false), color-stop(1, false));
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='false', EndColorStr='false')";
+  background-image: linear-gradient(top, false, false);
+  border: 4px solid #121416;
+  border-top-width: 1px;
+  -moz-border-radius: 0 0 0.6em 0.6em;
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0.6em;
+  -webkit-border-bottom-left-radius: 0.6em;
+  border-radius: 0 0 0.6em 0.6em;
+  -moz-box-shadow: 2px 4px 6px #767676;
+  -webkit-box-shadow: 2px 4px 6px #767676;
+  box-shadow: 2px 4px 6px #767676;
+}
+#portalNavigation .portal-flyout-container li {
+  border-top: 1px solid #282d33;
+  background-color: white;
+  color: #121416;
+  font-size: 85%;
+}
+#portalNavigation .portal-flyout-container li a {
+  text-decoration: none;
+}
+#portalNavigation .portal-flyout-container li a:hover, #portalNavigation .portal-flyout-container li a:focus {
+  /* Flyout menu hover. */
+  background: #38678f;
+  color: white;
+}
+#portalNavigation .portal-navigation-add {
+  /* Add tab link */
+  position: absolute;
+  top: 7px;
+  padding: 4px 8px 2px 20px;
+  background: url("../common/images/add.png") no-repeat 5px 5px;
+  border: 1px solid #3e4650;
+  color: white;
+  font-size: 86%;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+#portalNavigation .portal-navigation-add:hover, 
+#portalNavigation .portal-navigation-add:focus {
+  background-position: 5px 5px;
+  background-color: #3e4650;
+  color: white;
+}
+#portalNavigation li.portal-navigation-add-item {
+  float: right;
+  background: transparent none;
+  border: 0;
+  margin: 1px;
+  padding-left: 5px;
+}
+#portalNavigation .active .portal-navigation-gripper {
+  /* Gripper for indicating drag and drop ability. */
+  background: transparent url("../common/images/gripper.png") 0px 0px no-repeat;
+}
+#portalNavigation .portal-navigation-delete {
+  /* "X" icon for indicating delete tab action. */
+  background: transparent url("../common/images/remove.png") 0px 0px no-repeat;
+}
+#portalNavigation .fl-inlineEdit-editModeInstruction {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+#portalNavigation .fl-reorderer-header-avatar {
+  /* An avatar of the original tab being dragged during drag and drop. */
+  background-color: black;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0px, 0px, 4px, #333333;
+  -webkit-box-shadow: 0px, 0px, 4px, #333333;
+  box-shadow: 0px, 0px, 4px, #333333;
+}
+#portalNavigation .fl-reorderer-header-avatar .portal-navigation-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+#portalNavigation .fl-reorderer-header-avatar .portal-navigation-gripper {
+  background: transparent url("../common/images/gripper.png") 0px 0px no-repeat;
+}
+#portalNavigation .fl-reorderer-header-avatar .portal-navigation-delete {
+  background: transparent url("../common/images/remove.png") 0px 0px no-repeat;
+}

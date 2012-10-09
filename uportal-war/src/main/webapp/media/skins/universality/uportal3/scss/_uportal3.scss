@@ -1,0 +1,215 @@
+#portal {
+  background: #a9a9a9;
+  background-image: -moz-linear-gradient(top, #c3c3c3, #8f8f8f);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #c3c3c3), color-stop(1, #8f8f8f));
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#c3c3c3', EndColorStr='#8f8f8f')";
+  background-image: linear-gradient(top, #c3c3c3, #8f8f8f);
+}
+
+#portalPageInner {
+  background: #FFFFFF;
+  border-left: 1px solid #8f8f8f;
+  border-right: 1px solid #8f8f8f;
+}
+
+#portalPageHeader {
+  background: #4682b4;
+  background-image: -moz-linear-gradient(top, #699bc4, #38678f);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #699bc4), color-stop(1, #38678f));
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#699bc4', EndColorStr='#38678f')";
+  background-image: linear-gradient(top, #699bc4, #38678f);
+}
+
+#portalLogin .button {
+  border-color: #d96f0a;
+  background: #f58821;
+  color: white;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
+  background-image: -moz-linear-gradient(top, #f7a252, #d96f0a);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f7a252), color-stop(1, #d96f0a));
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#f7a252', EndColorStr='#d96f0a')";
+  background-image: linear-gradient(top, #f7a252, #d96f0a);
+  
+  &:hover,
+  &:focus {
+    border-color: #d96f0a;
+    background: #f7a252;
+    color: white;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
+    background-image: -moz-linear-gradient(top, #f9bc83, #d96f0a);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f9bc83), color-stop(1, #d96f0a));
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#f9bc83', EndColorStr='#d96f0a')";
+    background-image: linear-gradient(top, #f9bc83, #d96f0a);
+  }
+  &:active {
+    border-color: #d96f0a;
+    background: #f7a252;
+    color: white;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
+    background-image: -moz-linear-gradient(top, #f9bc83, #08180f);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f9bc83), color-stop(1, #08180f));
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#f9bc83', EndColorStr='#08180f')";
+    background-image: linear-gradient(top, #f9bc83, #08180f);
+  }
+}
+
+#portalWelcome {
+  color: #b2cce1;
+}
+#portalWelcome .user-name {
+  color: #FFFFFF;
+}
+
+#portalPageBar {
+  color: #b2cce1;
+  text-transform: uppercase;
+  background: #294d6b;
+  background-image: -moz-linear-gradient(top, #4682b4, #294d6b);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4682b4), color-stop(1, #294d6b));
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#4682b4', EndColorStr='#294d6b')";
+  background-image: linear-gradient(top, #4682b4, #294d6b);
+}
+#portalPageBarLinks li {
+  border-right: 1px solid rgba(178, 204, 225, 0.25);
+}
+#portalPageBarLinks a {
+  color: #b2cce1;
+  text-decoration: none;
+  
+  &:hover,
+  &:focus {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+#webSearchInput {
+  margin: 0;
+}
+#webSearchInput,
+#webSearchSubmit {
+  color: #444444;
+  background: #699bc4;
+  border-color: #38678f;
+  -moz-border-radius: 0.6em 0 0 0.6em;
+  -webkit-border-top-left-radius: 0.6em;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0.6em;
+  border-radius: 0.6em 0 0 0.6em;
+  
+  &:hover {
+    background: #8db3d3;
+  }
+  &:focus {
+    color: #444444;
+    background: white;
+    border-color: white;
+  }
+}
+#webSearchSubmit {
+  border-color: #294d6b;
+  background: #4682b4;
+  color: white;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
+  background-image: -moz-linear-gradient(top, #4682b4, #294d6b);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4682b4), color-stop(1, #294d6b));
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#4682b4', EndColorStr='#294d6b')";
+  background-image: linear-gradient(top, #4682b4, #294d6b);
+  padding: 0.3em 12px;
+  -moz-border-radius: 0 0.6em 0.6em 0;
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0.6em;
+  -webkit-border-bottom-right-radius: 0.6em;
+  -webkit-border-bottom-left-radius: 0;
+  border-radius: 0 0.6em 0.6em 0;
+  
+  &:hover,
+  &:focus {
+    border-color: #a85608;
+    background: #f7a252;
+    color: white;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
+    background-image: -moz-linear-gradient(top, #f9bc83, #d96f0a);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f9bc83), color-stop(1, #d96f0a));
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#f9bc83', EndColorStr='#d96f0a')";
+    background-image: linear-gradient(top, #f9bc83, #d96f0a); 
+  }
+  &:active {
+    border-color: #a85608;
+    background: #d96f0a;
+    color: white;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
+    background-image: -moz-linear-gradient(top, #d96f0a, #f7a252);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #d96f0a), color-stop(1, #f7a252));
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#d96f0a', EndColorStr='#f7a252')";
+    background-image: linear-gradient(top, #d96f0a, #f7a252);
+  }
+}
+
+/* Customize Page Message */
+#portalPageBodyCustomizeMessageRow {
+  padding-top: 4px; 
+  background: transparent url("images/customize_message_arrow.png") 40px 0px no-repeat;
+}
+#portalPageBodyCustomizeMessageRowContents {
+  padding: 10px 20px;
+  border-color: #f58821;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+}
+#portalPageBodyCustomizeMessageRowContents h1 {
+  color: #333333;
+}
+
+// Alert
+#portalHeaderBlock {
+  background: #294d6b;
+}
+
+// Fragment Admin
+#portalFragAdminExit {
+  background: #fcd6b3;
+  border-bottom: 1px solid #f58821;
+}
+#portalFragAdminExit h2 {
+  color: #f58821;
+  font-size: 150%;
+}
+#portalFragAdminExit {
+  background: #fcd6b3;
+}
+#portalFragAdminExit .button {
+  border-color: #d96f0a;
+  background: #f58821;
+  color: white;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
+  background-image: -moz-linear-gradient(top, #f7a252, #d96f0a);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f7a252), color-stop(1, #d96f0a));
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#f7a252', EndColorStr='#d96f0a')";
+  background-image: linear-gradient(top, #f7a252, #d96f0a);
+  
+  &:hover,
+  &:focus {
+    border-color: #d96f0a;
+    background: #f7a252;
+    color: white;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
+    background-image: -moz-linear-gradient(top, #f9bc83, #d96f0a);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f9bc83), color-stop(1, #d96f0a));
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#f9bc83', EndColorStr='#d96f0a')";
+    background-image: linear-gradient(top, #f9bc83, #d96f0a);
+  }
+  &:active {
+    border-color: #d96f0a;
+    background: #f7a252;
+    color: white;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
+    background-image: -moz-linear-gradient(top, #f9bc83, #08180f);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f9bc83), color-stop(1, #08180f));
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#f9bc83', EndColorStr='#08180f')";
+    background-image: linear-gradient(top, #f9bc83, #08180f);
+  }
+}
+

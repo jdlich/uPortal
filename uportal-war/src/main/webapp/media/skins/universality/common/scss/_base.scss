@@ -1,4 +1,4 @@
-$default-font-family: Verdana, Helvetica, san-serif !default;
+$default-font-family: Helvetica, Verdana, san-serif !default;
 
 body {
   margin: 0;
@@ -6,4 +6,13 @@ body {
   font-family: $default-font-family;
   font-size: 14px;
   line-height: 1.5;
+}
+form input[type="checkbox"] {
+  margin-right: 0.5em;
+}
+fieldset input[type="checkbox"] {
+  margin-bottom: 1em;
+}
+form input[type="submit"] {
+  padding: 2px 10px;
 }
