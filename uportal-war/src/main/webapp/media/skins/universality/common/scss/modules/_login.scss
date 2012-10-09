@@ -3,7 +3,15 @@
   position: absolute;
   top: 1.5em;
   right: 25px;
-  @include strip-fl-widget();
+  
+  .fl-widget-titlebar {
+    display: none;
+  }
+  .fl-widget-content {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+  }
 }
 #portalLogin .fl-widget-content {
   text-align: center;

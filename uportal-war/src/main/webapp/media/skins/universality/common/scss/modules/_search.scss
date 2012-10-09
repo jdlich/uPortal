@@ -6,7 +6,15 @@
   padding: 0;
   background: none;
   border: none;
-  @include strip-fl-widget();
+  
+  .fl-widget-titlebar {
+    display: none;
+  }
+  .fl-widget-content {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+  }
 }
 #webSearchInput {
   margin: 0;
