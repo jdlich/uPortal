@@ -146,6 +146,13 @@
   }
 }
 
+// Page title
+#portalPageBodyTitleRow h1 {
+  color: #4070a1;
+  border-bottom-width: .2em;
+  border-bottom-style: solid;
+}
+
 // Portlet Chrome
 .up-portlet-wrapper {
   background: #f5f5f5 url("../common/images/light_top_100px_50.png") 0px 0px repeat-x;
@@ -266,7 +273,8 @@
 
 /* Customize Page Message */
 #portalPageBodyCustomizeMessageRow {
-  padding-top: 4px; 
+  padding-top: 4px;
+  margin-top: -4px; 
   background: transparent url("images/customize_message_arrow.png") 40px 0px no-repeat;
 }
 #portalPageBodyCustomizeMessageRowContents {
