@@ -20,6 +20,7 @@
   background-image: linear-gradient(top, #699bc4, #38678f);
 }
 
+// Login
 #portalLogin .button {
   border-color: #d96f0a;
   background: #f58821;
@@ -53,6 +54,7 @@
   }
 }
 
+// Welcome
 #portalWelcome {
   color: #b2cce1;
 }
@@ -83,6 +85,7 @@
   }
 }
 
+// Search
 #webSearchInput,
 #webSearchSubmit {
   color: #444444;
@@ -141,6 +144,124 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#d96f0a', EndColorStr='#f7a252')";
     background-image: linear-gradient(top, #d96f0a, #f7a252);
   }
+}
+
+// Portlet Chrome
+.up-portlet-wrapper {
+  background: #f5f5f5 url("../common/images/light_top_100px_50.png") 0px 0px repeat-x;
+  background-image: -moz-linear-gradient(top, white, #f5f5f5 65px);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#f5f5f5), color-stop(0.1, white));
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#f5f5f5')";
+  background-image: linear-gradient(top, white, #f5f5f5 65px);
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  
+  // Alternate
+  &.alternate {
+    background: #b2cce1 url("../common/images/light_top_100px_50.png") 0px 0px repeat-x;
+    border: 1px solid #699bc4;
+    background-image: -moz-linear-gradient(top, white, #b2cce1 65px);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#b2cce1), color-stop(0.1, white));
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#b2cce1')";
+    background-image: linear-gradient(top, white, #b2cce1 65px);
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    
+    .up-portlet-titlebar h2 {
+      @include links(#38678f, #4682b4) {
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+      }
+    }
+    .up-portlet-content-wrapper {
+      background: white;
+      border: 1px solid #699bc4;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+    }
+  }
+  
+  // Highlight
+  &.highlight {
+    /* A portlet that has been flagged to have the highlight styling of portlet chrome. */
+    background: #a85608 url("../common/images/light_top_100px_50.png") 0px 0px repeat-x;
+    border: 1px solid #a85608;
+    background-image: -moz-linear-gradient(top, #f58821, #a85608 65px);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f58821), to(#a85608), color-stop(0.1, #f58821));
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#f58821', EndColorStr='#a85608')";
+    background-image: linear-gradient(top, #f58821, #a85608 65px);
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    
+    .up-portlet-titlebar h2 {
+      @include links(#783d05, #f9bc83) {
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+      }
+    }
+    .up-portlet-content-wrapper {
+      background: #fcd6b3;
+      border: 1px solid #a85608;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+    }
+  }
+  
+  // Locked
+  &.locked {
+    /* A portlet that has been locked (cannot be moved or removed). */
+    background: #dcdcdc url("../common/images/light_top_100px_50.png") 0px 0px repeat-x;
+    border: 1px solid #a9a9a9;
+    background-image: -moz-linear-gradient(top, #f5f5f5, #dcdcdc 65px);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#dcdcdc), color-stop(0.1, #f5f5f5));
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#f5f5f5', EndColorStr='#dcdcdc')";
+    background-image: linear-gradient(top, #f5f5f5, #dcdcdc 65px);
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    
+    .up-portlet-titlebar h2 {
+      padding-left: 21px;
+      background: transparent url("/ResourceServingWebapp/rs/tango/0.8.90/16x16/emblems/emblem-readonly.png") 0 0 no-repeat;
+      
+      @include links(#8f8f8f, #4682b4) {
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+      }
+    }
+    .up-portlet-content-wrapper {
+      background: white;
+      border: 1px solid #a9a9a9;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+    }
+  }
+}
+.up-portlet-titlebar h2 {
+  text-transform: uppercase;
+  
+  @include links(#a9a9a9, #4682b4) {
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+  }
+}
+.up-portlet-content-wrapper {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.up-portlet-wrapper-top,
+.up-portlet-wrapper-bottom {
+  /* These extra containers are available for additional styling (like rounded corners with images). 
+   * This skin does not use them, so hide them from view. */
+  display: none;
+}
+
+// Portlet Controls
+.up-portlet-controls {
+  @include links(#4682b4, #294d6b);
 }
 
 /* Customize Page Message */
@@ -222,8 +343,9 @@
   color: #FFFFFF;
 }
 #portalPageFooterLinks {
-  @include links(#FFFFFF, #699bc4);
-  font-weight: bold;
+  @include links(#FFFFFF, #699bc4) {
+    font-weight: bold;
+  }
 }
 #portalProductAndVersion {
   background: transparent url("../common/images/portal_poweredby.png") no-repeat top left;

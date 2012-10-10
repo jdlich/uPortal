@@ -1,0 +1,30 @@
+.up-portlet-wrapper {
+  padding: 5px;
+  margin-bottom: 1em;
+  border: 1px solid #dcdcdc;
+}
+.up-portlet-titlebar {
+  position: relative;
+  white-space: nowrap;
+}
+.up-portlet-titlebar h2 {
+  margin: 0; 
+  padding: 2px 20px 3px 20px;
+  font-weight: normal;
+}
+.up-portlet-content-wrapper {
+  margin: 0;
+  padding: 1em;
+  background: white;
+  border: 1px solid #dcdcdc;
+}
+.up-portlet-wrapper.no-chrome, 
+.up-portlet-wrapper.no-chrome .up-portlet-content-wrapper {
+  /* A portlet that has been flagged to have no chrome - "Just the content, please." */
+  padding: 0;
+  background: none;
+  border: none;
+}
+.up-portlet-wrapper.no-chrome .up-portlet-titlebar {
+  display: none;
+}

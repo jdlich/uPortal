@@ -40,5 +40,7 @@
     &:hover {
       color: $hover-color;
     }
+    
+    @content
   }
 }

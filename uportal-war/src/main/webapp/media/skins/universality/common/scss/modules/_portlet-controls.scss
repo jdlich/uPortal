@@ -1,0 +1,96 @@
+.up-portlet-controls {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  line-height: 1;
+}
+.up-portlet-control {
+  display: block;
+  float: left;
+  padding: 0;
+}
+.up-portlet-control .label {
+  display: none;
+}
+.focused .up-portlet-control {
+  margin-left: 1.5em;
+  text-decoration: none;
+}
+.focused .up-portlet-controls .label {
+  display: block;
+  float: left;
+  margin-left: 3px;
+}
+.up-portlet-control .icon {
+  display: block;
+  float: left;
+  height: 16px;
+  width: 16px;
+  background: url("../common/images/portlet_icons_flat.png") no-repeat 0 0;
+}
+.up-portlet-titlebar .focus .icon {
+  background-position: -0px 0px;
+}
+.up-portlet-titlebar .focus:hover .icon, 
+.up-portlet-titlebar .focus:focus .icon {
+  background-position: -0px -16px;
+}
+.up-portlet-titlebar .edit .icon {
+  background-position: -16px 0px;
+}
+.up-portlet-titlebar .edit:hover .icon, 
+.up-portlet-titlebar .edit:focus .icon {
+  background-position: -16px -16px;
+}
+.up-portlet-titlebar .info .icon {
+  background-position: -32px 0px;
+}
+.up-portlet-titlebar .info:hover .icon,
+.up-portlet-titlebar .info:focus .icon {
+  background-position: -32px -16px;
+}
+.up-portlet-titlebar .help .icon {
+  background-position: -48px 0px;
+}
+.up-portlet-titlebar .help:hover .icon, .up-portlet-wrapper .up-portlet-titlebar .help:focus .icon {
+  background-position: -48px -16px;
+}
+.up-portlet-titlebar .remove .icon {
+  background-position: -64px 0px;
+}
+.up-portlet-titlebar .remove:hover .icon, .up-portlet-wrapper .up-portlet-titlebar .remove:focus .icon {
+  background-position: -64px -16px;
+}
+.up-portlet-titlebar .add .icon {
+  background-position: -80px 0px;
+}
+.up-portlet-titlebar .add:hover .icon, 
+.up-portlet-titlebar .add:focus .icon {
+  background-position: -80px -16px;
+}
+.up-portlet-titlebar .permissions .icon {
+  background-position: -96px 0px;
+}
+.up-portlet-titlebar .permissions:hover .icon, 
+.up-portlet-titlebar .permissions:focus .icon {
+  background-position: -96px -16px;
+}
+.up-portlet-titlebar .show-content .icon {
+  background-position: -112px 0px;
+}
+.up-portlet-titlebar .show-content:hover .icon, .up-portlet-wrapper .up-portlet-titlebar .show-content:focus .icon {
+  background-position: -112px -16px;
+}
+.up-portlet-titlebar .hide-content .icon {
+  background-position: -128px 0px;
+}
+.up-portlet-titlebar .hide-content:hover .icon, .up-portlet-wrapper .up-portlet-titlebar .hide-content:focus .icon {
+  background-position: -128px -16px;
+}
+.up-portlet-titlebar .return .icon {
+  background-position: -144px 0px;
+}
+.up-portlet-titlebar .return:hover .icon, 
+.up-portlet-titlebar .return:focus .icon {
+  background-position: -144px -16px;
+}
