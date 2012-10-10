@@ -1,17 +1,14 @@
-.breadcrumb-separator {
-  padding:0 0.5em;
-}
 #portalPageBodyBreadcrumb {
-  /* Breadcrumb */
   color: #dcdcdc;
-}
-#portalPageBodyBreadcrumb a {
   font-weight: normal;
-  color: #a9a9a9;
-  text-decoration: none;
-  
-  &:hover,
-  &:focus {
-    color: #8f8f8f;
-  }
+  @include links(#a9a9a9, #8f8f8f);
+}
+#portalPageBodyBreadcrumb .breadcrumb-separator {
+  // TODO: remove the span tag from markup and
+  // use the content property on :before
+  padding: 0 0.5em;
+}
+#portalPageBodyBreadcrumb .breadcrumb-separator:last-child {
+  // ...and :first-child here instead
+  display: none;
 }
