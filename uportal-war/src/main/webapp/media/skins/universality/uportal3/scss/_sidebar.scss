@@ -1,18 +1,21 @@
 #portalQuicklinks ul, 
-#portalQuicklinks li {margin:0; padding:0;}
+#portalQuicklinks li {
+  margin: 0;
+  padding: 0;
+}
 
 /* Custom fl classes for use with the Sidebar. */
-.fl-col-mixed .fl-container-flex-left {margin-left:200px;}
-.fl-col-mixed .fl-container-flex-right {margin-right:200px;}
-.fl-col-mixed-100 .fl-container-flex-left {margin-left:100px;}
+.fl-col-mixed .fl-container-flex-left      {margin-left:200px;}
+.fl-col-mixed .fl-container-flex-right     {margin-right:200px;}
+.fl-col-mixed-100 .fl-container-flex-left  {margin-left:100px;}
 .fl-col-mixed-100 .fl-container-flex-right {margin-right:100px;}
-.fl-col-mixed-150 .fl-container-flex-left {margin-left:150px;}
+.fl-col-mixed-150 .fl-container-flex-left  {margin-left:150px;}
 .fl-col-mixed-150 .fl-container-flex-right {margin-right:150px;}
-.fl-col-mixed-200 .fl-container-flex-left {margin-left:200px;}
+.fl-col-mixed-200 .fl-container-flex-left  {margin-left:200px;}
 .fl-col-mixed-200 .fl-container-flex-right {margin-right:200px;}
-.fl-col-mixed-250 .fl-container-flex-left {margin-left:250px;}
+.fl-col-mixed-250 .fl-container-flex-left  {margin-left:250px;}
 .fl-col-mixed-250 .fl-container-flex-right {margin-right:250px;}
-.fl-col-mixed-300 .fl-container-flex-left {margin-left:300px;}
+.fl-col-mixed-300 .fl-container-flex-left  {margin-left:300px;}
 .fl-col-mixed-300 .fl-container-flex-right {margin-right:300px;}
 
 /* Navigation */
@@ -28,64 +31,199 @@
 .sidebar-right-300 #portalNavigationSubrow ul {margin-right:320px;}
 
 /* Sidebar */
-#portalSidebar {padding:0;}
-#portalSidebarInner {padding:0 1em 2em 1em;}
-#portalSidebar #portalCustomizationLinks .portal-pipe {display:none;}
+#portalSidebar {
+  padding: 0;
+}
+#portalSidebarInner {
+  padding: 0 1em 2em 1em;
+}
+#portalSidebar #portalCustomizationLinks .portal-pipe {
+  display: none;
+}
 /* Sidebar Widgets & Navigation*/
-#portalSidebar .fl-widget {padding:7px; font-size:85%;}
-#portalSidebar .fl-widget .fl-widget-titlebar {margin:0;}
-#portalSidebar .fl-widget .fl-widget-titlebar h2 {font-size:1em; font-weight:bold; border:none;}
+#portalSidebar .fl-widget {
+  padding: 7px;
+  font-size: 85%;
+}
+#portalSidebar .fl-widget .fl-widget-titlebar { 
+  margin: 0;
+}
+#portalSidebar .fl-widget .fl-widget-titlebar h2 {
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+}
 #portalSidebar .fl-widget-content,
-#portalSidebar .fl-widget .fl-listmenu {padding: .1em; border-width: 0px; border-bottom-width: 1px;}
-#portalSidebar .fl-widget .fl-listmenu ul{margin: 0;}
-#portalSidebar .fl-widget .fl-listmenu a {padding-left:28px; background-image:url(/ResourceServingWebapp/rs/famfamfam/silk/1.3/application.png); background-position:0.5em 0.5em; background-repeat:no-repeat;}
+#portalSidebar .fl-widget .fl-listmenu {
+  padding: .1em; 
+  border-width: 0px; 
+  border-bottom-width: 1px;
+}
+#portalSidebar .fl-widget .fl-listmenu ul {
+  margin: 0;
+}
+#portalSidebar .fl-widget .fl-listmenu a {
+  padding-left: 28px;
+  background-image: url(/ResourceServingWebapp/rs/famfamfam/silk/1.3/application.png);
+  background-position: 0.5em 0.5em; 
+  background-repeat: no-repeat;
+}
 #portalSidebar .fl-widget .fl-listmenu li,
-#portalSidebar .fl-widget .fl-listmenu li a {overflow: visible; *overflow: hidden; border: none;}
-#portalSidebar .fl-widget .fl-listmenu li {border: none; position: relative;}
-#portalSidebar .fl-widget .fl-listmenu li.first {border-left: none;}
+#portalSidebar .fl-widget .fl-listmenu li a {
+  overflow: visible; 
+  *overflow: hidden; 
+  border: none;
+}
+#portalSidebar .fl-widget .fl-listmenu li {
+  border: none; position: relative;
+}
+#portalSidebar .fl-widget .fl-listmenu li.first {
+  border-left: none;
+}
 #portalSidebar .fl-widget .fl-listmenu li:hover,
 #portalSidebar .fl-widget .fl-listmenu li:focus,
 #portalSidebar .fl-widget .fl-listmenu li a:hover,
-#portalSidebar .fl-widget .fl-listmenu li a:focus {outline:none;}
+#portalSidebar .fl-widget .fl-listmenu li a:focus {
+  outline: none;
+}
 /* Sidebar Subnavigation */
-#portalSidebar #portalNavigationInner {padding:0; background-color: transparent;}
-#portalSidebar .fl-widget .fl-listmenu li.fl-activemenu .portal-subnav-list a {padding-left:40px; padding-bottom: 7px; background-position:1.7em 0.5em; font-size: 83%;}
+#portalSidebar #portalNavigationInner {
+  padding:0; 
+  background-color: transparent;
+}
+#portalSidebar .fl-widget .fl-listmenu li.fl-activemenu .portal-subnav-list a {
+  padding-left: 40px; 
+  padding-bottom: 7px; 
+  background-position: 1.7em 0.5em;
+  font-size: 83%;
+}
 /* Sidebar Navigation: Icons */
 #portalSidebar #portalNavigation .portal-navigation-add,
 #portalSidebar #portalNavigation .portal-navigation-delete,
-#portalSidebar #portalNavigation .portal-navigation-gripper {display: none;}
-#portalSidebar #portalNavigation .active .portal-navigation-gripper {display: block; position: absolute; text-decoration: none; border: none;}
+#portalSidebar #portalNavigation .portal-navigation-gripper {
+  display: none;
+}
+#portalSidebar #portalNavigation .active .portal-navigation-gripper {
+  display: block; 
+  position: absolute; 
+  text-decoration: none; 
+  border: none;
+}
 #portalSidebar #portalNavigation .portal-navigation-add:hover,
-#portalSidebar #portalNavigation .portal-navigation-delete:hover {background-position: 0px -16px;}
+#portalSidebar #portalNavigation .portal-navigation-delete:hover {
+  background-position: 0px -16px;
+}
 #portalSidebar #portalNavigation .portal-navigation-delete,
 #portalSidebar #portalNavigation .portal-navigation-delete span,
 #portalSidebar #portalNavigation .active .portal-navigation-gripper,
-#portalSidebar #portalNavigation .active .portal-navigation-gripper span {display: block; width: 16px; height: 16px; overflow: hidden;}
+#portalSidebar #portalNavigation .active .portal-navigation-gripper span {
+  display: block; 
+  width: 16px; 
+  height: 16px; 
+  overflow: hidden;
+}
 #portalSidebar #portalNavigation .active .portal-navigation-delete span,
-#portalSidebar #portalNavigation .active .portal-navigation-gripper span {visibility: hidden;}
-#portalSidebar #portalNavigation .portal-navigation-add {height:16px; top: 1px; left: auto; right: 2px; padding:0px 0px 0px 16px; color: #000; text-transform: capitalize; background: transparent url("../images/add.png") 0px 0px no-repeat;}
-#portalSidebar #portalNavigation .active .portal-navigation-gripper {top: 0px; left: auto; right: 18px; cursor: move; background: transparent url("../images/gripper.png") 0px 0px no-repeat; padding: 0;}
-#portalSidebar #portalNavigation .portal-navigation-delete {top: 0px; right: 0px; cursor: pointer; background: transparent url("../images/remove.png") 0px 0px no-repeat; padding: 0;}
+#portalSidebar #portalNavigation .active .portal-navigation-gripper span {
+  visibility: hidden;
+}
+#portalSidebar #portalNavigation .portal-navigation-add {
+  height: 16px; 
+  top: 1px; 
+  left: auto; 
+  right: 2px; 
+  padding: 0px 0px 0px 16px;
+  color: #000;
+  text-transform: capitalize;
+  background: transparent url("../images/add.png") 0px 0px no-repeat;
+}
+#portalSidebar #portalNavigation .active .portal-navigation-gripper {
+  top: 0px; 
+  left: auto; 
+  right: 18px; 
+  cursor: move; 
+  background: transparent url("../images/gripper.png") 0px 0px no-repeat; 
+  padding: 0;
+}
+#portalSidebar #portalNavigation .portal-navigation-delete {
+  top: 0px; 
+  right: 0px; 
+  cursor: pointer; 
+  background: transparent url("../images/remove.png") 0px 0px no-repeat; 
+  padding: 0;
+}
 
 /* Fluid Layout Customizer (Sidebar: drag and drop) */
 /* Avatar Icons (common) */
 .fl-reorderer-sidebar-avatar .portal-navigation-delete,
-.fl-reorderer-sidebar-avatar .portal-navigation-gripper {display: block; position: absolute; padding: 0; border: none; text-decoration: none;}
+.fl-reorderer-sidebar-avatar .portal-navigation-gripper {
+  display: block; 
+  position: absolute; 
+  padding: 0; 
+  border: none; 
+  text-decoration: none;
+}
 .fl-reorderer-sidebar-avatar .portal-navigation-delete,
 .fl-reorderer-sidebar-avatar .portal-navigation-delete span,
 .fl-reorderer-sidebar-avatar .portal-navigation-gripper,
-.fl-reorderer-sidebar-avatar .portal-navigation-gripper span {display: block; width: 16px; height: 16px; overflow: hidden;}
+.fl-reorderer-sidebar-avatar .portal-navigation-gripper span {
+  display: block; 
+  width: 16px; 
+  height: 16px; 
+  overflow: hidden;
+}
 .fl-reorderer-sidebar-avatar .portal-navigation-delete span,
-.fl-reorderer-sidebar-avatar .portal-navigation-gripper span {visibility: hidden;}
+.fl-reorderer-sidebar-avatar .portal-navigation-gripper span {
+  visibility: hidden;
+}
 /* Avatar */
-.fl-reorderer-sidebar-avatar {display: inline; position: relative; padding: 5px 0 5px 20px; width: 150px; height: 30px; overflow: hidden; cursor: pointer; background-color: #FFF; border: 2px solid #F68922; filter:alpha(opacity=70); opacity:.7;}
-.fl-reorderer-sidebar-avatar .portal-navigation-link {color: #222222 !important; text-decoration: none;}
-.fl-reorderer-sidebar-avatar .portal-navigation-delete {top: 0px; right: 0px; cursor: pointer; background: transparent url("../images/remove.png") 0px 0px no-repeat;}
-.fl-reorderer-sidebar-avatar .portal-navigation-gripper {top: 0px; left: auto; right: 18px; cursor: move; background: transparent url("../images/gripper.png") 0px 0px no-repeat;}
-.fl-reorderer-sidebar-avatar .portal-flyout-container, .up .fl-reorderer-sidebar-avatar .portal-subnav-list{display: none !important;}
+.fl-reorderer-sidebar-avatar {
+  display: inline; 
+  position: relative; 
+  padding: 5px 0 5px 20px; 
+  width: 150px; 
+  height: 30px; 
+  overflow: hidden; 
+  cursor: pointer; 
+  background-color: #FFF; 
+  border: 2px solid #F68922; 
+  filter:alpha(opacity=70); 
+  opacity:.7;
+}
+.fl-reorderer-sidebar-avatar .portal-navigation-link {
+  color: #222222 !important; 
+  text-decoration: none;
+}
+.fl-reorderer-sidebar-avatar .portal-navigation-delete {
+  top: 0px; 
+  right: 0px; 
+  cursor: pointer; 
+  background: transparent url("../images/remove.png") 0px 0px no-repeat;
+}
+.fl-reorderer-sidebar-avatar .portal-navigation-gripper {
+  top: 0px; 
+  left: auto; 
+  right: 18px; 
+  cursor: move; 
+  background: transparent url("../images/gripper.png") 0px 0px no-repeat;
+}
+.fl-reorderer-sidebar-avatar .portal-flyout-container, 
+.up .fl-reorderer-sidebar-avatar .portal-subnav-list { 
+  display: none !important;
+}
 /* Drop Marker */
-.fl-reorderer-sidebar-dropMarker {display: inline-block; border: 1px solid #d26600 !important; background-color: #F68922 !important; margin: 0 2px !important; filter:alpha(opacity=80) !important;
-    opacity:.8 !important; padding: .31em 1em !important; *display: inline !important; *height: 10px; *padding: 0em .13em !important; *zoom: 1 !important;}
+.fl-reorderer-sidebar-dropMarker {
+  display: inline-block;
+  border: 1px solid #d26600 !important; 
+  background-color: #F68922 !important; 
+  margin: 0 2px !important; 
+  filter:alpha(opacity=80) !important;
+  opacity:.8 !important; 
+  padding: .31em 1em !important; 
+  *display: inline !important; 
+  *height: 10px; 
+  *padding: 0em .13em !important; 
+  *zoom: 1 !important;
+}
 
 #portalSidebar {
   /* Refer to other Sidebar styles for general list menu styling that affects the sidebar navigation. */
@@ -189,11 +327,15 @@
 #portalSidebar .fl-widget .fl-widget-content .fl-listmenu li {
   border: 1px solid #38678f;
 }
-#portalSidebar .fl-widget .fl-widget-content .fl-listmenu li, #portalSidebar .fl-widget .fl-widget-content .fl-listmenu li a {
+#portalSidebar .fl-widget .fl-widget-content .fl-listmenu li, 
+#portalSidebar .fl-widget .fl-widget-content .fl-listmenu li a {
   background: #38678f;
   color: #b2cce1;
 }
-#portalSidebar .fl-widget .fl-widget-content .fl-listmenu li:hover, #portalSidebar .fl-widget .fl-widget-content .fl-listmenu li:focus, #portalSidebar .fl-widget .fl-widget-content .fl-listmenu li a:hover, #portalSidebar .fl-widget .fl-widget-content .fl-listmenu li a:focus {
+#portalSidebar .fl-widget .fl-widget-content .fl-listmenu li:hover, 
+#portalSidebar .fl-widget .fl-widget-content .fl-listmenu li:focus, 
+#portalSidebar .fl-widget .fl-widget-content .fl-listmenu li a:hover, 
+#portalSidebar .fl-widget .fl-widget-content .fl-listmenu li a:focus {
   background: #a85608;
   color: white;
 }
@@ -201,7 +343,8 @@
   background: #294d6b;
   color: #8db3d3;
 }
-#portalSidebar .fl-widget .fl-widget-content .fl-listmenu .fl-activemenu .portal-subnav-list a:hover, #portalSidebar .fl-widget .fl-widget-content .fl-listmenu .fl-activemenu .portal-subnav-list a:focus {
+#portalSidebar .fl-widget .fl-widget-content .fl-listmenu .fl-activemenu .portal-subnav-list a:hover, 
+#portalSidebar .fl-widget .fl-widget-content .fl-listmenu .fl-activemenu .portal-subnav-list a:focus {
   background: #783d05;
   color: white;
 }

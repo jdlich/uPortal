@@ -1,4 +1,4 @@
-#portalLogin {
+#portalPageHeader #portalLogin {
   width: 10em;
   position: absolute;
   top: 1.5em;
@@ -13,6 +13,6 @@
     background: transparent;
   }
 }
-#portalLogin .fl-widget-content {
+#portalPageHeader #portalLogin .fl-widget-content {
   text-align: center;
 }
