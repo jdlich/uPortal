@@ -43,29 +43,6 @@
 #portalNavigationList .fl-inlineEditContainer {
   padding: 8px 20px;
 }
-#portalNavigationList .portal-navigation-gripper {
-  // TODO: find out why there isn't a diplay none style
-  // portal-navigation-delete as well and why it's missing
-  // from the DOM on non-active tabs while gripper is not
-  display: none;
-}
-#portalNavigationList .active .portal-navigation-gripper {
-  top: 0; 
-  left: 0; 
-  cursor: move; 
-  background: transparent url("../images/gripper.png") 0px 0px no-repeat; 
-  padding: 0;
-}
-#portalNavigationList .portal-navigation-delete {
-  top: 0; 
-  right: 0; 
-  cursor: pointer; 
-  background: transparent url("../images/remove.png") 0px 0px no-repeat; 
-  padding: 0;
-}
-#portalNavigationList .portal-navigation-delete:hover {
-  background-position: 0 -16px;
-}
 #portalNavigationList .portal-navigation-delete,
 #portalNavigationList .active .portal-navigation-gripper {
   display: block; 
@@ -80,6 +57,29 @@
   width: 16px; 
   height: 16px; 
   overflow: hidden;
+}
+#portalNavigationList .portal-navigation-gripper {
+  // TODO: find out why there isn't a diplay none style
+  // portal-navigation-delete as well and why it's missing
+  // from the DOM on non-active tabs while gripper is not
+  display: none;
+}
+#portalNavigationList .active .portal-navigation-gripper {
+  top: 0; 
+  left: 0; 
+  cursor: move; 
+  background: transparent url("../common/images/gripper.png") 0px 0px no-repeat; 
+  padding: 0;
+}
+#portalNavigationList .portal-navigation-delete {
+  top: 0; 
+  right: 0; 
+  cursor: pointer; 
+  background: transparent url("../common/images/remove.png") 0px 0px no-repeat; 
+  padding: 0;
+}
+#portalNavigationList .portal-navigation-delete:hover {
+  background-position: 0 -16px;
 }
 #portalNavigationList .portal-navigation-delete span,
 #portalNavigationList .active .portal-navigation-gripper span {
