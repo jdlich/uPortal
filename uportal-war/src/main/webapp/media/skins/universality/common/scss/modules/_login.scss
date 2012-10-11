@@ -14,5 +14,8 @@
   }
 }
 #portalPageHeader #portalLogin .fl-widget-content {
+  // TODO: use better classes to target the differences between
+  // the login in the header and the login in the sidebar i.e.
+  // `login` module with `login-sidebar` submodule
   text-align: center;
 }
