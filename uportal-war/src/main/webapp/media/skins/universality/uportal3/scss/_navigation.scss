@@ -5,6 +5,10 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#3e4650', EndColorStr='#121416')";
   background-image: linear-gradient(top, #3e4650, #121416);
 }
+
+#portalNavigation #portalNavigationList {
+  border: none;
+}
 #portalNavigation .portal-navigation {
   /* Each tab list item. */
   border: none;
@@ -97,8 +101,7 @@
   color: white;
 }
 #portalNavigation .portal-navigation-add {
-  /* Add tab link */
-  background: url("../common/images/add.png") no-repeat 5px 5px;
+  /* Add tab link styles */
   border: 1px solid #3e4650;
   color: white;
   font-size: 86%;
@@ -108,21 +111,12 @@
 }
 #portalNavigation .portal-navigation-add:hover, 
 #portalNavigation .portal-navigation-add:focus {
-  background-position: 5px 5px;
   background-color: #3e4650;
   color: white;
 }
 #portalNavigation li.portal-navigation-add-item {
   background: transparent none;
   border: 0;
-}
-#portalNavigation .active .portal-navigation-gripper {
-  /* Gripper for indicating drag and drop ability. */
-  background: transparent url("../common/images/gripper.png") 0px 0px no-repeat;
-}
-#portalNavigation .portal-navigation-delete {
-  /* "X" icon for indicating delete tab action. */
-  background: transparent url("../common/images/remove.png") 0px 0px no-repeat;
 }
 #portalNavigation .fl-inlineEdit-editModeInstruction {
   border: 0;
@@ -141,10 +135,4 @@
   color: white;
   text-decoration: none;
   font-weight: bold;
-}
-#portalNavigation .fl-reorderer-header-avatar .portal-navigation-gripper {
-  background: transparent url("../common/images/gripper.png") 0px 0px no-repeat;
-}
-#portalNavigation .fl-reorderer-header-avatar .portal-navigation-delete {
-  background: transparent url("../common/images/remove.png") 0px 0px no-repeat;
 }
