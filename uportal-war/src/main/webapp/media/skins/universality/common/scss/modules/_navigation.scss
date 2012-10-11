@@ -1,187 +1,120 @@
-.fl-tabs li a {
+#portalNavigationInner {
+  position: relative;
+}
+#portalNavigationList a {
   background: transparent;
   border: none;
   margin: 0;
   color: #333;
 }
-
-/* Navigation */
-#portalNavigationInner {
-  position: relative;
-}
-/* Navigation: Icons (common) */
-#portalNavigation .portal-navigation-gripper {
-  display: none;
-}
-#portalNavigation .portal-navigation-add,
-#portalNavigation .portal-navigation-delete,
-#portalNavigation .active .portal-navigation-gripper {
-  display: block; 
-  position: absolute; 
-  text-decoration: none; 
-  border: none;
-}
-#portalNavigation .portal-navigation-add { 
-  position: static;
-}
-#portalNavigation .portal-navigation-delete:hover {
-  background-position: 0px -16px;
-}
-#portalNavigation .portal-navigation-delete,
-#portalNavigation .portal-navigation-delete span,
-#portalNavigation .active .portal-navigation-gripper,
-#portalNavigation .active .portal-navigation-gripper span {
-  display: block; 
-  width: 16px; 
-  height: 16px; 
-  overflow: hidden;
-}
-#portalNavigation .portal-navigation-delete span,
-#portalNavigation .active .portal-navigation-gripper span {
-  visibility: hidden;
-}
-#portalNavigation .portal-navigation-add {
-  top: 1px; 
-  right: 2em; 
-  padding: 0px 0px 0px 16px;
-}
-#portalNavigation .active .portal-navigation-gripper {
-  top: 0px; 
-  left: 0px; 
-  cursor: move; 
-  background: transparent url("../images/gripper.png") 0px 0px no-repeat; 
-  padding: 0;
-}
-#portalNavigation .portal-navigation-delete {
-  top: 0px; 
-  right: 0px; 
-  cursor: pointer; 
-  background: transparent url("../images/remove.png") 0px 0px no-repeat; 
-  padding: 0;
-}
-
-/* Navigation: Subrow */
-#portalNavigationSubrow {
-  padding: 0.5em 0;
-}
-.sidebar-left-100 #portalNavigationSubrow ul  { margin-left: 120px;  }
-.sidebar-left-150 #portalNavigationSubrow ul  { margin-left: 170px;  }
-.sidebar-left-200 #portalNavigationSubrow ul  { margin-left: 220px;  }
-.sidebar-left-250 #portalNavigationSubrow ul  { margin-left: 270px;  }
-.sidebar-left-300 #portalNavigationSubrow ul  { margin-left: 320px;  }
-.sidebar-right-100 #portalNavigationSubrow ul { margin-right: 120px; }
-.sidebar-right-150 #portalNavigationSubrow ul { margin-right: 170px; }
-.sidebar-right-200 #portalNavigationSubrow ul { margin-right: 220px; }
-.sidebar-right-250 #portalNavigationSubrow ul { margin-right: 270px; }
-.sidebar-right-300 #portalNavigationSubrow ul { margin-right: 320px; }
-
-#portalNavigationSubrow li {
-  list-style-type: none;
-  display: inline;
-}
-#portalNavigationSubrow a {
-  padding: 0em 1em;
-}
-
-/* Navigation: Flyout */
-#portalNavigation .portal-flyout-container {
-  background: white;
-  width: 200px;
-  position: absolute; 
-  z-index: 100000; 
-  display: none;
-}
-#portalNavigation .portal-flyout-container .portal-subnav-list {
-  margin: 0;
-}
-#portalNavigation .portal-flyout-container .portal-subnav-list li {
-  display: list-item; 
-  position: static; 
-  padding: 0; 
-  list-style: none;
-}
-#portalNavigation .portal-flyout-container .portal-subnav-list li a {
-  display: block; 
-  padding: 0.7em 2em;
-}
-#portalNavigation .portal-flyout-container .portal-subnav-list li:first-child a {
-  border:none;
-}
-#portalNavigation .portal-flyout-iframe {
-  position: absolute;
-  z-index: 9;
-}
-/* Navigation: Flyout (Fix for IE7) */
-.on-top {
-  z-index: 1000000;
-}
-/* Navigation: Flyout (Legacy) */
-#portalNavigation .portal-flyout-container .portal-subnav-list #movePageLeftLink,
-#portalNavigation .portal-flyout-container .portal-subnav-list #movePageRightLink,
-#portalNavigation .portal-flyout-container .portal-subnav-list #editPageLink,
-#portalNavigation .portal-flyout-container .portal-subnav-list #deletePageLink {
-  display: none;
-}
-#portalNavigation .movable .portal-subnav-list #movePageLeftLink,
-#portalNavigation .movable .portal-subnav-list #movePageRightLink,
-#portalNavigation .editable .portal-subnav-list #editPageLink,
-#portalNavigation .deletable .portal-subnav-list #deletePageLink {
-  display: list-item;
-}
-#portalNavigation #portalNavigationList {
+#portalNavigationList {
   margin: 0 0 0 25px;
   padding: 0;
   zoom: 1;
   text-align: left;
   border: none;
 }
-#portalNavigation #portalNavigationList:before, 
-#portalNavigation #portalNavigationList:after {
+#portalNavigationList:before, 
+#portalNavigationList:after {
   content: "\0020";
   display: block;
   height: 0;
   overflow: hidden;
 }
-#portalNavigation #portalNavigationList:after {
+#portalNavigationList:after {
   clear: both;
 }
-#portalNavigation .portal-navigation {
-  /* Each tab list item. */
+#portalNavigationList .portal-navigation,
+#portalNavigationList .portal-navigation-add {
   float: left;
   display: inline-block;
   position: relative;
   padding: 0;
 }
-#portalNavigation .portal-navigation .portal-navigation-link {
-  /* Anchor tag within the list item. */
+#portalNavigationList .portal-navigation-link,
+#portalNavigationList .portal-navigation-add {
   display: block;
-}
-#portalNavigation .portal-navigation .portal-navigation-link, #portalNavigation .portal-navigation .fl-inlineEditContainer {
+  text-decoration: none;
   padding: 8px 20px;
 }
-
-#portalNavigation .portal-navigation-add {
-  /* Add tab link */
-  position: absolute;
-  top: 7px;
-  padding: 4px 8px 2px 20px;
-  background: url("../common/images/add.png") no-repeat 5px 5px;
-
-}
-#portalNavigation li.portal-navigation-add-item {
+#portalNavigationList .portal-navigation-add {
   float: right;
-  margin: 1px;
-  padding-left: 5px;
 }
-#portalNavigation .active .portal-navigation-gripper {
-  /* Gripper for indicating drag and drop ability. */
+#portalNavigationList .fl-inlineEditContainer {
+  padding: 8px 20px;
+}
+#portalNavigationList .portal-navigation-gripper {
+  // TODO: find out why there isn't a diplay none style
+  // portal-navigation-delete as well and why it's missing
+  // from the DOM on non-active tabs while gripper is not
+  display: none;
+}
+#portalNavigationList .active .portal-navigation-gripper {
+  top: 0; 
+  left: 0; 
+  cursor: move; 
+  background: transparent url("../images/gripper.png") 0px 0px no-repeat; 
+  padding: 0;
+}
+#portalNavigationList .portal-navigation-delete {
+  top: 0; 
+  right: 0; 
+  cursor: pointer; 
+  background: transparent url("../images/remove.png") 0px 0px no-repeat; 
+  padding: 0;
+}
+#portalNavigationList .portal-navigation-delete:hover {
+  background-position: 0 -16px;
+}
+#portalNavigationList .portal-navigation-delete,
+#portalNavigationList .active .portal-navigation-gripper {
+  display: block; 
+  position: absolute;
+  border: none;
+}
+#portalNavigationList .portal-navigation-delete,
+#portalNavigationList .portal-navigation-delete span,
+#portalNavigationList .active .portal-navigation-gripper,
+#portalNavigationList .active .portal-navigation-gripper span {
+  display: block; 
+  width: 16px; 
+  height: 16px; 
+  overflow: hidden;
+}
+#portalNavigationList .portal-navigation-delete span,
+#portalNavigationList .active .portal-navigation-gripper span {
+  visibility: hidden;
+}
+#portalNavigationList .fl-reorderer-header-avatar .portal-navigation-gripper {
   background: transparent url("../common/images/gripper.png") 0px 0px no-repeat;
 }
-#portalNavigation .portal-navigation-delete {
-  /* "X" icon for indicating delete tab action. */
+#portalNavigationList .fl-reorderer-header-avatar .portal-navigation-delete {
   background: transparent url("../common/images/remove.png") 0px 0px no-repeat;
 }
-#portalNavigation .fl-inlineEdit-editModeInstruction {
+#portalNavigationList .portal-flyout-container {
+  background: white;
+  width: 200px;
+  position: absolute; 
+  z-index: 100000; 
+  display: none;
+}
+#portalNavigationList .portal-subnav-list {
+  margin: 0;
+}
+#portalNavigationList .portal-subnav-list li {
+  display: list-item; 
+  position: static; 
+  padding: 0; 
+  list-style: none;
+}
+#portalNavigationList .portal-subnav-list li a {
+  display: block; 
+  padding: 0.7em 2em;
+}
+#portalNavigationList .portal-subnav-list li:first-child a {
+  border: none;
+}
+#portalNavigationList .fl-inlineEdit-editModeInstruction {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -191,9 +124,17 @@
   position: absolute;
   width: 1px;
 }
-#portalNavigation .fl-reorderer-header-avatar .portal-navigation-gripper {
-  background: transparent url("../common/images/gripper.png") 0px 0px no-repeat;
+
+// -----------------------------
+// TODO: fint out what this is and what to do with it
+
+#portalNavigationSubrow {
+  padding: 0.5em 0;
 }
-#portalNavigation .fl-reorderer-header-avatar .portal-navigation-delete {
-  background: transparent url("../common/images/remove.png") 0px 0px no-repeat;
+#portalNavigationSubrow li {
+  list-style-type: none;
+  display: inline;
+}
+#portalNavigationSubrow a {
+  padding: 0em 1em;
 }
