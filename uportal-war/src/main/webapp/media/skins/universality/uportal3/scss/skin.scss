@@ -1,6 +1,7 @@
 @import "../../common/scss/helpers";
 @import "../../common/scss/base";
 @import "../../common/scss/layout/containers";
+@import "../../common/scss/layout/fss";
 @import "../../common/scss/modules/skip-links";
 @import "../../common/scss/modules/button";
 @import "../../common/scss/modules/login";
@@ -21,8 +22,9 @@
 @import "../../common/scss/modules/portlet-chrome";
 @import "../../common/scss/modules/portlet-controls";
 @import "../../common/scss/modules/navigation";
+@import "../../common/scss/modules/sidebar";
+@import "../../common/scss/modules/sidebar-nav";
 
-@import "sidebar";
 @import "uportal3";
 
 

@@ -1,93 +1,3 @@
-#portalQuicklinks ul, 
-#portalQuicklinks li {
-  margin: 0;
-  padding: 0;
-}
-#portalSidebar {
-  padding: 0;
-}
-#portalSidebarInner {
-  padding: 0 0 0 15px;
-}
-#portalSidebar .fl-widget {
-  padding: 7px;
-  font-size: 85%;
-  border: 1px solid #121416;
-  background: #282d33 url("../common/images/light_top_100px_50.png") 0px 0px repeat-x;
-  background-image: -moz-linear-gradient(top, #6b7989, #282d33);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #6b7989), color-stop(1, #282d33));
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#6b7989', EndColorStr='#282d33')";
-  background-image: linear-gradient(top, #6b7989, #282d33);
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-}
-#portalSidebar .fl-widget .fl-widget-content {
-  background: #38678f;
-  color: #b2cce1;
-  border: 1px solid #282d33;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-}
-#portalSidebar .fl-widget .fl-widget-titlebar { 
-  margin: 0;
-}
-#portalSidebar .fl-widget .fl-widget-titlebar h2 {
-  border: none;
-  padding: 0;
-  font-size: 100%;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
-  color: #b2cce1;
-}
-#portalSidebar .fl-widget .fl-listmenu {
-  background: #38678f;
-  border: 1px solid #38678f;
-}
-#portalSidebar .fl-widget-content,
-#portalSidebar .fl-widget .fl-listmenu {
-  padding: .1em; 
-  border-width: 0; 
-  border-bottom-width: 1px;
-}
-#portalSidebar .fl-widget .fl-listmenu ul {
-  margin: 0;
-}
-#portalSidebar .fl-widget .fl-listmenu li {
-  position: relative;
-  border: 1px solid #38678f;
-}
-#portalSidebar .fl-widget .fl-listmenu li.first {
-  border-left: none;
-}
-#portalSidebar .fl-widget .fl-listmenu li, 
-#portalSidebar .fl-widget .fl-listmenu li a {
-  color: #b2cce1;
-}
-#portalSidebar .fl-widget .fl-listmenu a {
-  padding-left: 28px;
-  background-image: url(/ResourceServingWebapp/rs/famfamfam/silk/1.3/application.png);
-  background-position: 0.5em 0.5em; 
-  background-repeat: no-repeat;
-  text-decoration: none;
-}
-#portalSidebar #portletNavigationLinkHome a {
-  background-image: url(/ResourceServingWebapp/rs/famfamfam/silk/1.3/house.png);
-}
-#portalSidebar .fl-widget .fl-listmenu li a:hover, 
-#portalSidebar .fl-widget .fl-listmenu li a:focus {
-  background-color: #a85608;
-  color: white;
-}
-
-// Fragment Admin
-#portalSidebar #portalFragAdminList .fl-widget-content {
-  /* This sidebar widget does not have a list menu and needs some padding. */
-  padding: 1em 12px;
-}
-
 // Subnav
 #portalSidebar .fl-widget .fl-widget-content .fl-listmenu .fl-activemenu .portal-subnav-list a {
   background: #294d6b;
@@ -103,17 +13,7 @@
   color: white;
 }
 
-
 // Sidebar Navigation
-#portalSidebar #portalNavigationInner {
-  padding:0; 
-  background-color: transparent;
-}
-#portalSidebar #portletNavigation h3 {
-  color: white;
-  margin:0.5em 0 0 0;
-  padding:0.2em 0.5em;
-}
 #portalSidebar #portalNavigation .portal-navigation-add,
 #portalSidebar #portalNavigation .portal-navigation-delete,
 #portalSidebar #portalNavigation .portal-navigation-gripper {
@@ -162,8 +62,6 @@
   opacity:.7;
   background: black;
   border: 2px solid #F68922; 
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
   border-radius: 5px;
   -moz-box-shadow: 0px, 0px, 4px, #333333;
   -webkit-box-shadow: 0px, 0px, 4px, #333333;

@@ -1,0 +1,33 @@
+#portalQuicklinks ul, 
+#portalQuicklinks li {
+  margin: 0;
+  padding: 0;
+}
+#portalSidebar {
+  padding: 0;
+}
+#portalSidebarInner {
+  padding: 0 0 0 15px; // TODO: padding here is being used as the column gutter, which belongs somewhere in layout and should be handled by FSS - this is the reason for the layout issue in the guest view when the sidebar is on the left
+}
+#portalSidebar .fl-widget {
+  font-size: 85%;
+}
+#portalSidebar .fl-widget h3 {
+  margin: 0.5em 0 0 0;
+  padding: 0.2em 0.5em;
+}
+#portalSidebar .fl-widget .fl-widget-titlebar h2 {
+  border: none;
+  padding: 0;
+  font-size: 100%;
+}
+#portalSidebar .fl-widget .fl-listmenu {
+  border: none;
+}
+#portalSidebar .fl-widget .fl-listmenu ul {
+  margin: 0;
+}
+#portalSidebar .fl-widget .fl-listmenu li {
+  border: none;
+  position: relative;
+}

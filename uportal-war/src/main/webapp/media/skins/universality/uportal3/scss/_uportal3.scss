@@ -384,6 +384,54 @@ input[type='button'] {
   font-weight: bold;
 }
 
+// Sidebar
+#portalSidebar .fl-widget {
+  border: 1px solid #121416;
+  background: #282d33 url("../common/images/light_top_100px_50.png") 0px 0px repeat-x;
+  background-image: -moz-linear-gradient(top, #6b7989, #282d33);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #6b7989), color-stop(1, #282d33));
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#6b7989', EndColorStr='#282d33')";
+  background-image: linear-gradient(top, #6b7989, #282d33);
+  border-radius: 5px;
+}
+#portalSidebar .fl-widget h3 {
+  color: white;
+}
+#portalSidebar .fl-widget .fl-widget-content {
+  background: #38678f;
+  border: 1px solid #282d33;
+  border-radius: 3px;
+  color: #b2cce1;
+}
+#portalSidebar .fl-widget .fl-widget-titlebar h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
+  color: #b2cce1;
+}
+#portalSidebar .fl-widget .fl-listmenu {
+  background: #38678f;
+}
+#portalSidebar .fl-widget .fl-listmenu li, 
+#portalSidebar .fl-widget .fl-listmenu li a {
+  color: #b2cce1;
+}
+#portalSidebar .fl-widget .fl-listmenu a {
+  padding-left: 28px;
+  background-image: url(/ResourceServingWebapp/rs/famfamfam/silk/1.3/application.png);
+  background-position: 0.5em 0.5em; 
+  background-repeat: no-repeat;
+  text-decoration: none;
+}
+#portalSidebar #portletNavigationLinkHome a {
+  background-image: url(/ResourceServingWebapp/rs/famfamfam/silk/1.3/house.png);
+}
+#portalSidebar .fl-widget .fl-listmenu li a:hover, 
+#portalSidebar .fl-widget .fl-listmenu li a:focus {
+  background-color: #a85608;
+  color: white;
+}
+
 // Page title
 #portalPageBodyTitleRow h1 {
   color: #4070a1;
