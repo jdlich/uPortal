@@ -384,6 +384,67 @@ input[type='button'] {
   font-weight: bold;
 }
 
+// Gallery
+.up-gallery .close-button .button {
+  border-color: #294d6b;
+  background: #4682b4;
+  color: white;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
+  background-image: -moz-linear-gradient(top, #4682b4, #294d6b);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4682b4), color-stop(1, #294d6b));
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#4682b4', EndColorStr='#294d6b')";
+  background-image: linear-gradient(top, #4682b4, #294d6b);
+  
+  &:hover,
+  &:focus {
+    border-color: #294d6b;
+    background: #699bc4;
+    color: white;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
+    background-image: -moz-linear-gradient(top, #8db3d3, #294d6b);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8db3d3), color-stop(1, #294d6b));
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#8db3d3', EndColorStr='#294d6b')";
+    background-image: linear-gradient(top, #8db3d3, #294d6b);
+  }
+  &:active {
+    border-color: #294d6b;
+    background: #38678f;
+    color: white;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
+    background-image: -moz-linear-gradient(top, #294d6b, #4682b4);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #294d6b), color-stop(1, #4682b4));
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#294d6b', EndColorStr='#4682b4')";
+    background-image: linear-gradient(top, #294d6b, #4682b4);
+  }
+}
+.up-gallery .menu li:hover {
+  background: #1b3246;
+}
+.up-gallery .content-filters-wrapper h3 {
+  color: #38678f;
+   
+  &:hover,
+  &:focus {
+    color: #699bc4;
+  }
+}
+.up-gallery .results-wrapper .portlet-wrapper:hover .ri-link, 
+.up-gallery .results-wrapper .portlet-wrapper:focus .ri-link, 
+.up-gallery .results-wrapper .package-wrapper:hover .ri-link, 
+.up-gallery .results-wrapper .package-wrapper:focus .ri-link {
+  background: #38678f;
+  background-image: -moz-linear-gradient(top, #699bc4, #38678f);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #699bc4), color-stop(1, #38678f));
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#699bc4', EndColorStr='#38678f')";
+  background-image: linear-gradient(top, #699bc4, #38678f);
+}
+.up-gallery .pager-button-up,
+.up-gallery .pager-button-down {
+  &:focus, &:hover {
+    border-color: #4682b4;
+  }
+}
+
 // Sidebar
 #portalSidebar .fl-widget {
   border: 1px solid #121416;

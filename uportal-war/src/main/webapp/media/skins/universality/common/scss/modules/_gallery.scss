@@ -1,211 +1,43 @@
-/* 
-------------------------------------
-  uPortal Gallery.
------------------------------------- 
- * The gallery is a sliding drawer that provides interfaces for customizing the protal.
- */
-
-/* Gallery Layout 
- * Includes Fluid layout overides.
- * Generally the overall layout should not need to be altered.
- * If needed, override these values on a per-skin basis by adding the overrides to portal.css within the desired skin folder.
- */
-.clear-float {clear:both;}
-.up-gallery {position:relative;}
-.up-gallery .gallery-inner {display:none; overflow: hidden; padding-top:7px; height:200px;  position:relative;}
-.up-gallery .column-inner {position:relative;}
-.up-gallery .menu-wrapper {width:130px; display:block; height:200px; position:relative;}
-.up-gallery .content-wrapper {margin:0 0 0 127px; padding:8px 0; display:block; height:174px;}
-.up-gallery .content {padding-right:8px; }
-.up-gallery .content-filters-wrapper {width:200px; padding:0px; display:block; height:174px; position:relative;}
-.up-gallery .content-results-wrapper {margin:0 0 0 220px; display:block; height:172px;}
-.up-gallery .content-pager-wrapper {padding:0px; width:70px; display:block; height:170px;}
-.up-gallery .content-results-wrapper {padding:0px;}
-.up-gallery .skins .content-results-wrapper,
-.up-gallery .layouts .content-results-wrapper {margin-left:0px; margin-right:0px;}
-.up-gallery .results-wrapper {overflow:hidden; padding-right:1px;}
-.up-gallery .fl-col-mixed2 .fl-col-main {padding-left:0px;}
-.up-gallery .content .add-content,
-.up-gallery .content .use-content {overflow-y: hidden;}
-
-
-/* Gallery Menu Items 
- * The navigation menu of gallery views.
- */
-.up-gallery .menu {height:190px; padding:10px 0 0 0; position:relative; margin-top:0; margin-bottom:0; margin-left:15px; margin-right:auto; width:100px; border-left-width:1px; border-left-style:solid; border-right-width:1px; border-right-style:solid;}
-.up-gallery .menu li {position:relative; height:28px; cursor:pointer; list-style:none; margin:0; border-top-width:1px; border-top-style:solid;}
-.up-gallery .menu li a {text-decoration: none; cursor: pointer;}
-.up-gallery .menu li.last {border-bottom-width:1px; border-bottom-style:solid;}
-.up-gallery .menu li span {padding:7px; display:block; height:14px; width:110px; bottom:0; font-weight:bold; font-size:12px;}
-.up-gallery .menu li.active span {position:relative;}
-.up-gallery .menu li.active:hover,
-.up-gallery .menu li.active:focus {outline:none;}
-.up-gallery .menu li :focus {outline:none;}
-*:first-child+html .up-gallery .menu li {height:25px;}
-
-
-/* Gallery Handle 
- * Clickable handle that opens the drawer. Once open, the handle can be clicked to close the drawer.
- */
-.up-gallery .handle {margin:0; padding:0; position:absolute; bottom:-7px; left:0; right:0; height:7px; clear:both;}
-.up-gallery .handle a {width:100px; cursor:pointer; font-size:10px; border-top:0px; position:absolute; top:6px; left:0; margin-left:25px;}
-.up-gallery .handle a:hover {text-decoration: none;}
-.up-gallery .handle a span {text-transform:uppercase; font-weight:bold; padding:1px 25px 2px 10px; margin-right:5px; display:block;}
-
-
-/* Gallery Modal Loaders 
- * Preloaders while the content loads, following the opening of the drawer.
- */
-.up-gallery .gallery-loader {display: block; margin: 7px 0px 0px 127px; position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; background-image:url("../images/gallery-content-preloader.gif"); background-position:50% 50%; background-repeat:no-repeat;}
-.up-gallery .gallery-loader span {display: none;}
-
-
-/* Gallery Close Button 
- * An explicit close button, that closes the drawer.
- */
-.up-gallery .close-button {position:absolute; left:32px; bottom:5px;}
-
-
-/* Gallery Add/Use Portlet Filters 
- * Search and category filters for the add portlet and use portlet views.
- */
-.up-gallery .portlet-search-form {margin-bottom:10px;}
-.up-gallery .portlet-search-form label,
-.up-gallery .portlet-search-form .portlet-search-submit {display:none;}
-.up .up-gallery .portlet-search-form .portlet-search-input {width:157px;}
-.up-gallery .categories-column,.up-gallery .packages-column {padding:0;}
-.up-gallery .categories,.up-gallery .packages {}
-.up-gallery .categories-column, .up-gallery .packages-column {clear:both;}
-.up-gallery .content-filters-wrapper h3 {margin:0; padding:5px 0 0 0; cursor:pointer; font-size:12px;}
-.up-gallery .content-filters-wrapper h3 span {padding:1px 10px}
-.up-gallery .packages-column h3 {position:absolute; top:0; left:56px;}
-.up-gallery .categories-column .categories-wrapper, .up-gallery .packages-column .packages-wrapper {display:none;}
-.up-gallery .categories-column.active .categories-wrapper, .up-gallery .packages-column.active .packages-wrapper {display:block;}
-.up-gallery .packages-wrapper, .up-gallery .categories-wrapper {padding:10px;}
-.up-gallery .packages p {margin:0; font-size:11px;}
-.up-gallery .categories-column h4 {padding-bottom:1px; margin-bottom:3px; font-size:10px; text-transform:uppercase;}
-.up-gallery .categories ul, .up-gallery .categories li, .up-gallery .categories a {list-style:none; margin:0; padding:0; font-size:10px; text-decoration:none;}
-.up-gallery .categories li {float:left; padding:1px 0 1px 2px;  text-align:left; cursor:pointer;}
-.up-gallery .categories li:after {content:", ";}
-.up-gallery .categories li:last-child:after {content:"";}
-.up-gallery .categories li.active a {text-decoration:underline;}
-
-
-/* Gallery List Pager 
- * Pagination controls for lists in the gallery.
- */
-.up-gallery .pager-button-up span,
-.up-gallery .pager-button-down span {display:none;}
-.up-gallery .pager-pagination {height:38px; margin:2px 0 2px 0; font-size:10px;}
-.up-gallery .pager-button-up-inner {display:block; height:59px; background: url(../images/gallery-pager-up-active.png) center 85% no-repeat;}
-.up-gallery .pager-button-down-inner {display:block; height:59px; background: url(../images/gallery-pager-down-active.png) center 15% no-repeat;}
-.up-gallery .pager-button-up.fl-pager-disabled .pager-button-up-inner {background-image: url(../images/gallery-pager-up-inactive.png);}
-.up-gallery .pager-button-down.fl-pager-disabled .pager-button-down-inner {background-image: url(../images/gallery-pager-down-inactive.png);}
-.up-gallery .pager-button-up,
-.up-gallery .pager-button-down {cursor:pointer; position:relative; height:62px;}
-
-
-/* Gallery Results List 
- * General formatting for results lists (portlets, packages, skins, and layouts).
- */
-.up-gallery .results-wrapper {font-size:10px; position:relative;}
-.up-gallery .results-wrapper-inner {padding: 0px 5px;}
-.up-gallery .results-wrapper .results-list {list-style:none; padding-top: 5px; margin:0; position:relative; width:100%; overflow:hidden;}
-.up-gallery .results-wrapper .results-list .results-item,
-.up-gallery .results-wrapper .results-list .result-item {margin-right: 5px; margin-bottom:5px;}
-.up-gallery .results-wrapper .results-list li {display:block; list-style:none; padding:0; margin:0; position:relative; float:left;}
-.up-gallery .results-wrapper .results-list li .ri-wrapper {padding:0px; position:relative;}
-.up-gallery .results-wrapper .results-list .skins-wrapper .ri-link,
-.up-gallery .results-wrapper .results-list .layout-wrapper .ri-link {display:block; padding:5px;}
-.up-gallery .results-wrapper .results-list .ri-link .ri-content {overflow: hidden;}
-.up-gallery .results-wrapper a {text-decoration:none;}
-.up-gallery .results-column.fl-col-main {margin:0 74px 0 0; padding:0px; position:relative;}
-.up-gallery .results-wrapper .pager-column.fl-col-side {float:right; width:74px; margin:0px; padding:0px;}
-.up-gallery .ri-titlebar {font-size:11px; font-weight:bold; margin-bottom: 5px;}
-.up-gallery .ri-icon {float:left; margin-right:5px;}
-.up-gallery .skins-wrapper .ri-icon {margin-right:0;}
-.up-gallery .ri-icon span {visibility: hidden;}
-.up-gallery .ri-description {clear:right; display:inline;}
-
-/* Gallery Portlet and Package Lists
- * The list of portlets and packages for add and use.
- */
-.up-gallery .portlet-list li,
-.up-gallery .package-list li {width: 32%; height:50%;}
-.up-gallery .portlet-list li .portlet-wrapper,
-.up-gallery .package-list li .package-wrapper {height:80px;}
-.up-gallery .portlet-wrapper .ri-link,
-.up-gallery .package-wrapper .ri-link {position: absolute; top: 0px; right: 0px; display: block; cursor:pointer; padding:2px 8px; text-align:center;}
-.up-gallery .portlet-wrapper .ri-icon,
-.up-gallery .package-wrapper .ri-icon {width:32px; height:32px;}
-.up-gallery .package-wrapper .ri-content,
-.up-gallery .portlet-wrapper .ri-content {padding:5px;}
-/* Drag Handle */
-.up-gallery .portlet-thumb-gripper {display: block; cursor: move;}
-.up-gallery .portlet-thumb-gripper span {display: block; width: 16px; height: 16px; overflow: hidden; visibility: hidden;}
-/* IE7 adjustments*/
-*:first-child+html .up-gallery .results-wrapper .portlet-list li, 
-*:first-child+html .up-gallery .results-wrapper .package-list li {width:24%;} 
-
-
-/* Gallery Skin List 
- * The list of skins.
- */
-.up-gallery .skins-wrapper .skin-thumb {width: 120px; height: 70px;}
-
-/* Gallery Layout List 
- * The list of page layouts.
- */
-.up-gallery .results-wrapper .layouts-list li {width:140px; height:50%;}
-.up-gallery .layout-wrapper .layout-thumb {width: 27px; height:27px;}
-
-/* Gallery: Avatar */
-.portlet.ui-draggable-dragging {
-    border: 1px solid #F68923; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius-topright:0px; -moz-border-radius-topright:0px; -webkit-border-top-right-radius:0px;
-    padding: 0; margin: 0; list-style: none; -moz-box-shadow: 0px 0px 4px 0px #333; -webkit-box-shadow: 0px 0px 4px 0px #333; box-shadow: 0px 0px 4px 0px #333; background: #333; position: relative;
-    background-image:-moz-linear-gradient(90deg,#000000,#333333); background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#000000), to(#333333)); height: 80px; width: auto;
-    overflow: hidden; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; filter: alpha(opacity=80);}
-.portlet.ui-draggable-dragging .portlet-wrapper {overflow: hidden;}
-.portlet.ui-draggable-dragging .portlet-wrapper-inner {padding:0px 10px 0px 10px; position: relative;}
-.portlet.ui-draggable-dragging .portlet-thumb-link {
-    position: absolute; top: 0px; right: 0px; display: block; color: #000; text-decoration: none; font-size: 77%; padding: 2px 8px; background: #666; background-image: -moz-linear-gradient(90deg,#666,#ffffff); 
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#666), to(#ffffff)); text-align: center; cursor: move; background: #F68923; background-image: -moz-linear-gradient(90deg,#F68923,#ffffff);
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F68923),to(#ffffff));}
-.portlet.ui-draggable-dragging .portlet-thumb-gripper {
-    display: block; background: #444444 url("../images/gripper.png") 5px 0px no-repeat; cursor: move; -moz-border-radius-topleft: 5px; -webkit-border-top-left-radius: 5px; border-top-left-radius: 5px;}
-.portlet.ui-draggable-dragging .portlet-thumb-gripper span {display: block; width: 16px; height: 16px; overflow: hidden; visibility: hidden;}
-.portlet.ui-draggable-dragging .portlet-thumb-titlebar {padding: 5px 8px 3px 8px; font-size:11px; font-weight:bold; color:#DDD;}
-.portlet.ui-draggable-dragging .portlet-thumb-content {padding: 0px 8px 0px 8px;}
-.portlet.ui-draggable-dragging .portlet-thumb-icon {width:37px; height:37px;}
-.portlet.ui-draggable-dragging .portlet-thumb-icon span {visibility: hidden;}
-.portlet.ui-draggable-dragging .portlet-thumb-description {color: #AAA; padding: 0; margin-left: 36px; font-size: 11px;}
-
-/* Gallery: Drop Target */
-.layout-draggable-drop-target {display: none; background: #FF0000; padding: 5px; height: 150px; text-align: center; margin-bottom: 1em;  border: 2px dotted #960000; font-weight: bold; color: #960000;}
-.layout-draggable-drop-target span {display: block; padding: 65px 5px 5px 5px;}
-.layout-draggable-drop-target-active {}
-.layout-draggable-target-dropped {border: 1px solid #CCC; background: #EFEFEF url("../../uportal3/images/loading.gif") 50% 50% no-repeat;}
-.layout-draggable-target-dropped span {display:none;}
-
-
-//-------------------------------------------------------------------------------------------------------
-// scss
-
-/* 
-------------------------------------
-  uPortal Gallery.
------------------------------------- 
- * The gallery is a sliding drawer that provides interfaces for customizing the protal.
- */
 .up-gallery {
   background: #333333;
-  border: 1px solid #a9a9a9;
+  position: relative;
+  line-height: 1;
 }
+
+// loader
+.up-gallery .gallery-loader {
+  display: block; 
+  margin: 7px 0px 0px 127px; 
+  position: absolute; 
+  top: 0px; 
+  bottom: 0px; 
+  left: 0px; 
+  right: 0px; 
+  background: url("../common/images/gallery-content-preloader.gif") no-repeat 50% 50%; 
+}
+.up-gallery .gallery-loader span {
+  display: none;
+}
+
+// handle
 .up-gallery .handle {
-  /* Clickable handle that opens the drawer. Once open, the handle can be clicked to close the drawer. */
   background: black url("../common/images/gallery-bar.png") bottom left repeat-x;
+  margin: 0; 
+  position: absolute; 
+  bottom: -7px; 
+  left: 0; 
+  right: 0; 
+  height: 7px;
 }
 .up-gallery .handle a {
+  width:100px; 
+  cursor:pointer; 
+  font-size:10px; 
+  border-top:0px; 
+  position:absolute; 
+  top:6px; 
+  left:0; 
+  margin-left:25px;
   background: white scroll url("../common/images/gallery-handle.png") 0 0 repeat-x;
   color: #444444;
   border: 1px solid #8f8f8f;
@@ -221,90 +53,141 @@
   box-shadow: 0 1px 2px #a9a9a9;
 }
 .up-gallery .handle a span {
-  background-image: url("../common/images/gallery-handle-arrow-down.png");
-  background-position: right center;
-  background-repeat: no-repeat;
+  background: url("../common/images/gallery-handle-arrow-down.png") no-repeat right center;
+  text-transform:uppercase; 
+  font-weight:bold; 
+  padding:1px 25px 2px 10px; 
+  margin-right:5px; 
+  display:block;
 }
-.up-gallery .handle .handle-arrow{
+.up-gallery .handle .handle-arrow-up {
   background-image: url("../common/images/gallery-handle-arrow-up.png") !important;
 }
+
 .up-gallery .gallery-inner {
   background: transparent url("../common/images/gallery-bar.png") top left repeat-x;
+  display:none;
+  overflow: hidden; 
+  padding: 7px 0 0 25px;
+  height:200px; 
+  position:relative;
 }
-.up-gallery .gallery-inner .menu-wrapper {
-  /* The navigation menu of gallery views. */
+
+// menu
+.up-gallery .menu-wrapper {
+  padding: 0;
+  width: auto;
+  display:block;
+  height:200px; 
+  position:relative;
 }
-.up-gallery .gallery-inner .menu-wrapper .menu {
+.up-gallery .menu {
   border: 1px solid #c3c3c3;
+  border-top: none;
   background: #404040;
+  height:199px;
+  position:relative; 
+  margin: 0;
+  width:100px; 
 }
-.up-gallery .gallery-inner .menu-wrapper .menu li {
+.up-gallery .menu li {
+  position:relative; 
+  cursor:pointer; 
+  list-style:none; 
+  margin:0;
   border: 1px solid #8f8f8f;
   background: #4d4d4d;
+  
+  &:hover {
+    background: #999999;
+  }
+  :focus {
+    outline:none;
+  }
 }
-.up-gallery .gallery-inner .menu-wrapper .menu li a {
+.up-gallery .menu li span {
+  padding:7px; 
+  display:block; 
+  bottom:0; 
+  font-size:12px;
+}
+.up-gallery .menu li a {
   color: #c3c3c3;
+  text-decoration: none;
+  cursor: pointer;
+  
+  &:hover,
+  &:active {
+    color: #ffffff;
+  }
 }
-.up-gallery .gallery-inner .menu-wrapper .menu li:hover, .up-gallery .gallery-inner .menu-wrapper .menu li:active {
-  background: #1b3246;
-}
-.up-gallery .gallery-inner .menu-wrapper .menu li:hover a, .up-gallery .gallery-inner .menu-wrapper .menu li:active a {
-  color: white;
-}
-.up-gallery .gallery-inner .menu-wrapper .menu .active {
+.up-gallery .menu .active {
   background: #333333;
 }
-.up-gallery .gallery-inner .menu-wrapper .menu .active a {
+.up-gallery .menu .active a {
   color: white;
 }
-.up-gallery .gallery-inner .menu-wrapper .menu .active span {
+.up-gallery .menu .active span {
+  position: relative;
   background: #333333 url("../common/images/gallery-arrow-right.png") 90% 50% no-repeat;
 }
-.up-gallery .gallery-inner .menu-wrapper .close-button {
-  /* Close gallery ("I'm Done") button. */
+
+.up-gallery .close-button {
+  position:absolute; 
+  left: 15px; 
+  bottom: 15px;
 }
-.up-gallery .gallery-inner .menu-wrapper .close-button .button, .up-gallery .gallery-inner .menu-wrapper .close-button button, .up-gallery .gallery-inner .menu-wrapper .close-button input[type='submit'], .up-gallery .gallery-inner .menu-wrapper .close-button input[type='button'] {
-  border-color: #294d6b;
-  background: #4682b4;
-  color: white;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
-  background-image: -moz-linear-gradient(top, #4682b4, #294d6b);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4682b4), color-stop(1, #294d6b));
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#4682b4', EndColorStr='#294d6b')";
-  background-image: linear-gradient(top, #4682b4, #294d6b);
+.up-gallery .close-button .button {
+  color: #999999;
+  
+  &:hover,
+  &:focus {
+    color: #ffffff;
+  }
 }
-.up-gallery .gallery-inner .menu-wrapper .close-button .button:hover, .up-gallery .gallery-inner .menu-wrapper .close-button .button:focus, .up-gallery .gallery-inner .menu-wrapper .close-button a.button:hover, .up-gallery .gallery-inner .menu-wrapper .close-button a.button:focus, .up-gallery .gallery-inner .menu-wrapper .close-button button:hover, .up-gallery .gallery-inner .menu-wrapper .close-button button:focus, .up-gallery .gallery-inner .menu-wrapper .close-button input[type='submit']:hover, .up-gallery .gallery-inner .menu-wrapper .close-button input[type='submit']:focus, .up-gallery .gallery-inner .menu-wrapper .close-button input[type='button']:hover, .up-gallery .gallery-inner .menu-wrapper .close-button input[type='button']:focus {
-  border-color: #294d6b;
-  background: #699bc4;
-  color: white;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
-  background-image: -moz-linear-gradient(top, #8db3d3, #294d6b);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8db3d3), color-stop(1, #294d6b));
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#8db3d3', EndColorStr='#294d6b')";
-  background-image: linear-gradient(top, #8db3d3, #294d6b);
+.up-gallery .content-wrapper {
+  margin:0 0 0 127px; 
+  padding:8px 0; 
+  display:block; 
+  height:174px;
 }
-.up-gallery .gallery-inner .menu-wrapper .close-button .button:active, .up-gallery .gallery-inner .menu-wrapper .close-button button:active, .up-gallery .gallery-inner .menu-wrapper .close-button input[type='submit']:active, .up-gallery .gallery-inner .menu-wrapper .close-button input[type='button']:active {
-  border-color: #294d6b;
-  background: #38678f;
-  color: white;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
-  background-image: -moz-linear-gradient(top, #294d6b, #4682b4);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #294d6b), color-stop(1, #4682b4));
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#294d6b', EndColorStr='#4682b4')";
-  background-image: linear-gradient(top, #294d6b, #4682b4);
+.up-gallery .content .add-content,
+.up-gallery .content .use-content {
+  overflow-y: hidden;
 }
-.up-gallery .gallery-inner .content-filters-wrapper {
+.up-gallery .content-filters-wrapper {
   /* Search and category filters for the add portlet and use portlet views. */
   background: #404040;
   border: 1px solid #595959;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
   border-radius: 5px;
+  width:200px; 
+  padding:0px; 
+  display:block; 
+  height:174px; 
+  position:relative;
 }
-.up-gallery .gallery-inner .content-filters-wrapper h3 {
+.up-gallery .content-filters-wrapper h3 {
   /* Filter titles */
+  margin: 0;
+  padding: 5px 0 0 0;
+  cursor: pointer;
+  font-size: 12px;
   background: #333333;
-  color: #38678f;
+  color: #666666;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  border-radius: 5px 5px 0 0;
+  
+  &:hover,
+  &:focus {
+    color: #ffffff;
+  }
+}
+.up-gallery .content-filters-wrapper h3 span {
+  padding: 1px 10px;
   -moz-border-radius: 5px 5px 0 0;
   -webkit-border-top-left-radius: 5px;
   -webkit-border-top-right-radius: 5px;
@@ -312,66 +195,183 @@
   -webkit-border-bottom-left-radius: 0;
   border-radius: 5px 5px 0 0;
 }
-.up-gallery .gallery-inner .content-filters-wrapper h3 span {
-  -moz-border-radius: 5px 5px 0 0;
-  -webkit-border-top-left-radius: 5px;
-  -webkit-border-top-right-radius: 5px;
-  -webkit-border-bottom-right-radius: 0;
-  -webkit-border-bottom-left-radius: 0;
-  border-radius: 5px 5px 0 0;
-}
-.up-gallery .gallery-inner .content-filters-wrapper h3:hover, .up-gallery .gallery-inner .content-filters-wrapper h3:focus {
-  color: #699bc4;
-}
-.up-gallery .gallery-inner .content-filters-wrapper .active h3 span {
+.up-gallery .content-filters-wrapper .active h3 span {
   background: #404040;
   color: white;
 }
-.up-gallery .gallery-inner .content-filters-wrapper .active h3:hover, .up-gallery .gallery-inner .content-filters-wrapper .active h3:focus {
+.up-gallery .content-filters-wrapper .active h3:hover, 
+.up-gallery .content-filters-wrapper .active h3:focus {
   color: #8db3d3;
 }
-.up-gallery .gallery-inner .content-filters-wrapper h4 {
+.up-gallery .content-filters-wrapper h4 {
   /* Filter subtitles */
   color: #dcdcdc;
   border-bottom: 1px dotted #5c5c5c;
 }
-.up-gallery .gallery-inner .content-filters-wrapper .portlet-search-input {
+
+// portlet-search-input
+.up-gallery .portlet-search-input {
   /* Filter search */
   background: #595959;
   color: #333333;
   padding: 0.3em;
 }
-.up-gallery .gallery-inner .content-filters-wrapper .portlet-search-input:hover {
+.up-gallery .portlet-search-input:hover {
   background: #767676;
 }
-.up-gallery .gallery-inner .content-filters-wrapper .portlet-search-input:focus {
+.up-gallery .portlet-search-input:focus {
   background: white;
 }
-.up-gallery .gallery-inner .content-filters-wrapper .categories {
-  /* Filter categories */
+.up-gallery .portlet-search-form {
+  margin-bottom: 10px;
 }
-.up-gallery .gallery-inner .content-filters-wrapper .categories a {
+.up-gallery .portlet-search-form label,
+.up-gallery .portlet-search-form .portlet-search-submit {
+  display: none;
+}
+.up .up-gallery .portlet-search-form .portlet-search-input {
+  width: 157px;
+}
+
+// categories and packages
+.up-gallery .categories-column,
+.up-gallery .packages-column {
+  padding: 0;
+  clear: both;
+}
+.up-gallery .categories-column .categories-wrapper,
+.up-gallery .packages-column .packages-wrapper {
+  display: none;
+}
+.up-gallery .categories-column.active .categories-wrapper,
+.up-gallery .packages-column.active .packages-wrapper {
+  display: block;
+}
+.up-gallery .packages-wrapper,
+.up-gallery .categories-wrapper {
+  padding: 10px;
+}
+.up-gallery .packages p {
+  margin: 0;
+  font-size: 11px;
+}
+
+// categories
+.up-gallery .categories ul, 
+.up-gallery .categories li, 
+.up-gallery .categories a {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  text-decoration: none;
+}
+.up-gallery .categories li {
+  float: left;
+  padding: 1px 0 1px 2px;
+  text-align: left;
+  cursor: pointer;
+}
+.up-gallery .categories li:after {
+  content: ", ";
+}
+.up-gallery .categories li:last-child:after {
+  content: "";
+}
+.up-gallery .categories a {
   color: #c3c3c3;
 }
-.up-gallery .gallery-inner .content-filters-wrapper .categories a:hover, .up-gallery .gallery-inner .content-filters-wrapper .categories a:focus {
+.up-gallery .categories a:hover, 
+.up-gallery .categories a:focus {
   color: #4682b4;
 }
-.up-gallery .gallery-inner .content-filters-wrapper .categories .active a {
+.up-gallery .categories .active a {
   color: white;
+  text-decoration: underline;
 }
-.up-gallery .gallery-inner .content-filters-wrapper .packages-wrapper {
+.up-gallery .categories-column h4 {
+  padding-bottom: 1px;
+  margin-bottom: 3px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+// packages
+.up-gallery .packages-wrapper {
   /* Filter packages */
   color: #dcdcdc;
 }
-.up-gallery .gallery-inner .results-wrapper {
+.up-gallery .packages-column h3 {
+  position: absolute;
+  top: 0;
+  left: 56px;
+}
+
+// content-results-wrapper
+.up-gallery .content-results-wrapper {
+  margin: 0 0 0 220px;
+  padding: 0px;
+  display: block; 
+  height: 172px;
+}
+.up-gallery .skins .content-results-wrapper,
+.up-gallery .layouts .content-results-wrapper {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+// layout
+.up-gallery .results-column.fl-col-main {
+  margin: 0 74px 0 0;
+  padding: 0px;
+  position: relative;
+}
+.up-gallery .results-wrapper .pager-column.fl-col-side {
+  float: right;
+  width: 74px;
+  margin: 0px;
+  padding: 0px;
+}
+
+// results-wrapper
+.up-gallery .results-wrapper {
   /* Results section of the gallery. Lists portlets, packages, skins, or layout options. */
+  font-size: 10px;
+  position: relative;
   padding-bottom: 5px;
   color: #a9a9a9;
+  overflow: hidden;
+  padding-right: 1px;
 }
-.up-gallery .gallery-inner .results-wrapper .layout-wrapper .ri-link,
-.up-gallery .gallery-inner .results-wrapper .skins-wrapper .ri-link,
-.up-gallery .gallery-inner .results-wrapper .portlet.result-item,
-.up-gallery .gallery-inner .results-wrapper .package.results-item {
+.up-gallery .results-wrapper a {
+  text-decoration: none;
+}
+.up-gallery .results-wrapper-inner {
+  padding: 0px 5px;
+}
+.up-gallery .ri-titlebar {
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.up-gallery .ri-icon {
+  float: left;
+  margin-right: 5px;
+}
+.up-gallery .skins-wrapper .ri-icon {
+  margin-right: 0;
+}
+.up-gallery .ri-icon span {
+  visibility: hidden;
+}
+.up-gallery .ri-description {
+  clear: right;
+  display: inline;
+}
+.up-gallery .results-wrapper .layout-wrapper .ri-link,
+.up-gallery .results-wrapper .skins-wrapper .ri-link,
+.up-gallery .results-wrapper .portlet.result-item,
+.up-gallery .results-wrapper .package.results-item {
   background: #333333;
   border: 1px solid #595959;
   -moz-border-radius: 5px;
@@ -381,16 +381,18 @@
   -webkit-box-shadow: 1px 1px 2px black;
   box-shadow: 1px 1px 2px black;
 }
-.up-gallery .gallery-inner .results-wrapper .layout-wrapper .ri-link:hover, .up-gallery .gallery-inner .results-wrapper .layout-wrapper .ri-link:focus, .up-gallery .gallery-inner .results-wrapper .layout-wrapper .ri-link:active,
-.up-gallery .gallery-inner .results-wrapper .skins-wrapper .ri-link:hover,
-.up-gallery .gallery-inner .results-wrapper .skins-wrapper .ri-link:focus,
-.up-gallery .gallery-inner .results-wrapper .skins-wrapper .ri-link:active,
-.up-gallery .gallery-inner .results-wrapper .portlet.result-item:hover,
-.up-gallery .gallery-inner .results-wrapper .portlet.result-item:focus,
-.up-gallery .gallery-inner .results-wrapper .portlet.result-item:active,
-.up-gallery .gallery-inner .results-wrapper .package.results-item:hover,
-.up-gallery .gallery-inner .results-wrapper .package.results-item:focus,
-.up-gallery .gallery-inner .results-wrapper .package.results-item:active {
+.up-gallery .results-wrapper .layout-wrapper .ri-link:hover, 
+.up-gallery .results-wrapper .layout-wrapper .ri-link:focus, 
+.up-gallery .results-wrapper .layout-wrapper .ri-link:active,
+.up-gallery .results-wrapper .skins-wrapper .ri-link:hover,
+.up-gallery .results-wrapper .skins-wrapper .ri-link:focus,
+.up-gallery .results-wrapper .skins-wrapper .ri-link:active,
+.up-gallery .results-wrapper .portlet.result-item:hover,
+.up-gallery .results-wrapper .portlet.result-item:focus,
+.up-gallery .results-wrapper .portlet.result-item:active,
+.up-gallery .results-wrapper .package.results-item:hover,
+.up-gallery .results-wrapper .package.results-item:focus,
+.up-gallery .results-wrapper .package.results-item:active {
   background: #1a1a1a;
   border: 1px soild #4682b4;
   background-image: -moz-linear-gradient(top, #333333, #0d0d0d);
@@ -398,26 +400,28 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#333333', EndColorStr='#0d0d0d')";
   background-image: linear-gradient(top, #333333, #0d0d0d);
 }
-.up-gallery .gallery-inner .results-wrapper .results-item.disabled {
+.up-gallery .results-wrapper .results-item.disabled {
   -moz-opacity: 0.2;
   opacity: 0.2;
   filter: progid:DXImageTransform.Microsoft.Alpha(opacity=20);
   filter: alpha(opacity=20);
   border-color: #3A3A3A !important;
 }
-.up-gallery .gallery-inner .results-wrapper .results-item.disabled:hover, .up-gallery .gallery-inner .results-wrapper .results-item.disabled:focus,
-.up-gallery .gallery-inner .results-wrapper .results-item.disabled a:hover, .up-gallery .gallery-inner .results-wrapper .results-item.disabled a:focus {
+.up-gallery .results-wrapper .results-item.disabled:hover, 
+.up-gallery .results-wrapper .results-item.disabled:focus,
+.up-gallery .results-wrapper .results-item.disabled a:hover, 
+.up-gallery .results-wrapper .results-item.disabled a:focus {
   background: none !important;
   cursor: default !important;
 }
-.up-gallery .gallery-inner .results-wrapper .results-item.selected .ri-link {
+.up-gallery .results-wrapper .results-item.selected .ri-link {
   background: #262626;
   border-width: 3px;
   border-style: solid;
   border-color: #4682b4;
   margin-bottom: -6px;
 }
-.up-gallery .gallery-inner .results-wrapper .ri-wrapper .ri-utility {
+.up-gallery .results-wrapper .ri-wrapper .ri-utility {
   height: 16px;
   background: #404040;
   -moz-border-radius: 5px 5px 0 0;
@@ -427,16 +431,29 @@
   -webkit-border-bottom-left-radius: 0;
   border-radius: 5px 5px 0 0;
 }
-.up-gallery .gallery-inner .results-wrapper .ri-wrapper .portlet-thumb-gripper {
+.up-gallery .portlet-list li,
+.up-gallery .package-list li {
+  width: 32%;
+  height: 50%;
+}
+.up-gallery .results-wrapper .ri-wrapper .portlet-thumb-gripper {
   background: #404040 url("../common/images/gripper.png") 5px 0px no-repeat;
 }
-.up-gallery .gallery-inner .results-wrapper .ri-wrapper .ri-titlebar {
+.up-gallery .results-wrapper .ri-wrapper .ri-titlebar {
   color: white;
 }
-.up-gallery .gallery-inner .results-wrapper .ri-wrapper .ri-description {
+.up-gallery .results-wrapper .ri-wrapper .ri-description {
   color: #c3c3c3;
 }
-.up-gallery .gallery-inner .results-wrapper .portlet-wrapper .ri-link, .up-gallery .gallery-inner .results-wrapper .package-wrapper .ri-link {
+.up-gallery .results-wrapper .portlet-wrapper .ri-link, 
+.up-gallery .results-wrapper .package-wrapper .ri-link {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: block;
+  cursor: pointer;
+  padding: 2px 8px;
+  text-align: center;
   color: black;
   background: #333333;
   background-image: -moz-linear-gradient(top, #a9a9a9, #5c5c5c);
@@ -451,18 +468,116 @@
   border-radius: 0 5px 0 0;
   display: none;
 }
-.up-gallery .gallery-inner .results-wrapper .portlet-wrapper:hover .ri-link, .up-gallery .gallery-inner .results-wrapper .portlet-wrapper:focus .ri-link, .up-gallery .gallery-inner .results-wrapper .package-wrapper:hover .ri-link, .up-gallery .gallery-inner .results-wrapper .package-wrapper:focus .ri-link {
-  background: #38678f;
-  background-image: -moz-linear-gradient(top, #699bc4, #38678f);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #699bc4), color-stop(1, #38678f));
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#699bc4', EndColorStr='#38678f')";
-  background-image: linear-gradient(top, #699bc4, #38678f);
+.up-gallery .results-wrapper .portlet-wrapper:hover .ri-link, 
+.up-gallery .results-wrapper .portlet-wrapper:focus .ri-link, 
+.up-gallery .results-wrapper .package-wrapper:hover .ri-link, 
+.up-gallery .results-wrapper .package-wrapper:focus .ri-link {
   display: block;
+  background: #999999;
 }
-.up-gallery .gallery-inner .results-wrapper .pager .pager-pagination {
+.up-gallery .portlet-list li .portlet-wrapper,
+.up-gallery .package-list li .package-wrapper {
+  height: 80px;
+}
+.up-gallery .portlet-wrapper .ri-icon,
+.up-gallery .package-wrapper .ri-icon {
+  width: 32px;
+  height: 32px;
+}
+.up-gallery .package-wrapper .ri-content,
+.up-gallery .portlet-wrapper .ri-content {
+  padding: 5px;
+}
+/* Drag Handle */
+.up-gallery .portlet-thumb-gripper {
+  display: block;
+  cursor: move;
+}
+.up-gallery .portlet-thumb-gripper span {
+  display: block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+// results-list
+.up-gallery .results-list {
+  list-style: none;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.up-gallery .results-list .results-item,
+.up-gallery .results-list .result-item {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.up-gallery .results-list li {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  float: left;
+}
+.up-gallery .results-list li .ri-wrapper {
+  padding: 0px;
+  position: relative;
+}
+
+.up-gallery .results-list .skins-wrapper .ri-link,
+.up-gallery .results-list .layout-wrapper .ri-link {
+  display: block;
+  padding: 5px;
+}
+.up-gallery .results-list .ri-link .ri-content {
+  overflow: hidden;
+}
+
+// skin
+.up-gallery .skins-wrapper .skin-thumb {
+  width: 120px;
+  height: 70px;
+}
+
+// page layouts
+.up-gallery .results-wrapper .layouts-list li {
+  width: 140px;
+  height: 50%;
+}
+.up-gallery .layout-wrapper .layout-thumb {
+  width: 27px;
+  height: 27px;
+}
+
+// pagination
+.up-gallery .pager-pagination {
   color: white;
+  height:38px; 
+  margin:2px 0 2px 0; 
+  font-size:10px;
 }
-.up-gallery .gallery-inner .results-wrapper .pager .pager-button-up, .up-gallery .gallery-inner .results-wrapper .pager .pager-button-down {
+.up-gallery .pager-button-up-inner {
+  display:block; 
+  height:59px; 
+  background: url(../common/images/gallery-pager-up-active.png) center 85% no-repeat;
+}
+.up-gallery .pager-button-down-inner {
+  display: block;
+  height: 59px;
+  background: url(../common/images/gallery-pager-down-active.png) center 15% no-repeat;
+}
+.up-gallery .pager-button-up span,
+.up-gallery .pager-button-down span {
+  display:none;
+}
+.up-gallery .pager-button-up, 
+.up-gallery .pager-button-down {
+  cursor: pointer;
+  position: relative;
+  height: 62px;
   background: #404040;
   border: 1px solid #595959;
   background-image: -moz-linear-gradient(top, #4d4d4d, #333333);
@@ -472,20 +587,142 @@
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
+  
+  &:hover,
+  &:focus {
+    background: #595959;
+    border: 1px solid #999999;
+    background-image: -moz-linear-gradient(top, #4d4d4d, #0d0d0d);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4d4d4d), color-stop(1, #0d0d0d));
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#4d4d4d', EndColorStr='#0d0d0d')";
+    background-image: linear-gradient(top, #4d4d4d, #0d0d0d);
+  }
 }
-.up-gallery .gallery-inner .results-wrapper .pager .pager-button-up:hover, .up-gallery .gallery-inner .results-wrapper .pager .pager-button-up:focus, .up-gallery .gallery-inner .results-wrapper .pager .pager-button-down:hover, .up-gallery .gallery-inner .results-wrapper .pager .pager-button-down:focus {
-  background: #595959;
-  border: 1px solid #4682b4;
-  background-image: -moz-linear-gradient(top, #4d4d4d, #0d0d0d);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4d4d4d), color-stop(1, #0d0d0d));
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#4d4d4d', EndColorStr='#0d0d0d')";
-  background-image: linear-gradient(top, #4d4d4d, #0d0d0d);
-}
-.up-gallery .gallery-inner .results-wrapper .pager .fl-pager-disabled {
+.up-gallery .fl-pager-disabled {
   background: #333333 !important;
   border: 1px solid #404040 !important;
   cursor: default !important;
 }
-.up-gallery .gallery-inner .results-wrapper .pager .fl-pager-disabled a {
+.up-gallery .fl-pager-disabled a {
   cursor: default !important;
+}
+.up-gallery .pager-button-up.fl-pager-disabled .pager-button-up-inner {
+  background-image: url(../common/images/gallery-pager-up-inactive.png);
+}
+.up-gallery .pager-button-down.fl-pager-disabled .pager-button-down-inner {
+  background-image: url(../common/images/gallery-pager-down-inactive.png);
+}
+
+/* Gallery: Avatar */
+.portlet.ui-draggable-dragging {
+  border: 1px solid #F68923;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius-topright: 0px;
+  -moz-border-radius-topright: 0px;
+  -webkit-border-top-right-radius: 0px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  -moz-box-shadow: 0px 0px 4px 0px #333;
+  -webkit-box-shadow: 0px 0px 4px 0px #333;
+  box-shadow: 0px 0px 4px 0px #333;
+  background: #333;
+  position: relative;
+  background-image: -moz-linear-gradient(90deg,#000000,#333333);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#000000), to(#333333));
+  height: 80px;
+  width: auto;
+  overflow: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+}
+.portlet.ui-draggable-dragging .portlet-wrapper {
+  overflow: hidden;
+}
+.portlet.ui-draggable-dragging .portlet-wrapper-inner {
+  padding: 0px 10px 0px 10px;
+  position: relative;
+}
+.portlet.ui-draggable-dragging .portlet-thumb-link {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: block;
+  color: #000;
+  text-decoration: none;
+  font-size: 77%;
+  padding: 2px 8px;
+  background: #666;
+  background-image: -moz-linear-gradient(90deg,#666,#ffffff);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#666), to(#ffffff));
+  text-align: center;
+  cursor: move;
+  background: #F68923;
+  background-image: -moz-linear-gradient(90deg,#F68923,#ffffff);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F68923),to(#ffffff));
+}
+.portlet.ui-draggable-dragging .portlet-thumb-gripper {
+  display: block;
+  background: #444444 url("../common/images/gripper.png") 5px 0px no-repeat;
+  cursor: move;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.portlet.ui-draggable-dragging .portlet-thumb-gripper span {
+  display: block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  visibility: hidden;
+}
+.portlet.ui-draggable-dragging .portlet-thumb-titlebar {
+  padding: 5px 8px 3px 8px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #DDD;
+}
+.portlet.ui-draggable-dragging .portlet-thumb-content {
+  padding: 0px 8px 0px 8px;
+}
+.portlet.ui-draggable-dragging .portlet-thumb-icon {
+  width: 37px;
+  height: 37px;
+}
+.portlet.ui-draggable-dragging .portlet-thumb-icon span {
+  visibility: hidden;
+}
+.portlet.ui-draggable-dragging .portlet-thumb-description {
+  color: #AAA;
+  padding: 0;
+  margin-left: 36px;
+  font-size: 11px;
+}
+
+/* Gallery: Drop Target */
+.layout-draggable-drop-target {
+  display: none;
+  background: #FF0000;
+  padding: 5px;
+  height: 150px;
+  text-align: center;
+  margin-bottom: 1em;
+  border: 2px dotted #960000;
+  font-weight: bold;
+  color: #960000;
+}
+.layout-draggable-drop-target span {
+  display: block;
+  padding: 65px 5px 5px 5px;
+}
+.layout-draggable-drop-target-active {
+}
+.layout-draggable-target-dropped {
+  border: 1px solid #CCC;
+  background: #EFEFEF url("../../uportal3/images/loading.gif") 50% 50% no-repeat;
+}
+.layout-draggable-target-dropped span {
+  display: none;
 }
