@@ -88,7 +88,8 @@
   height:199px;
   position:relative; 
   margin: 0;
-  width:100px; 
+  width:100px;
+  padding-top: 10px;
 }
 .up-gallery .menu li {
   position:relative; 
@@ -130,6 +131,7 @@
 .up-gallery .menu .active span {
   position: relative;
   background: #333333 url("../common/images/gallery-arrow-right.png") 90% 50% no-repeat;
+  width: 110px;
 }
 
 .up-gallery .close-button {
