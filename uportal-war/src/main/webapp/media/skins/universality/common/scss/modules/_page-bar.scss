@@ -4,5 +4,5 @@
   text-align: right;
 }
 .utilities {
-  @include hlist-delimiter();
+  @include hlist();
 }

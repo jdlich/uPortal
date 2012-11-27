@@ -18,16 +18,6 @@
     display: inline-block;
   }
 }
-@mixin hlist-delimiter() {
-  @include hlist();
-  
-  > li:last-child {
-    border: none !important;
-  }
-  > li:after {
-    content: "" !important;
-  }
-}
 
 @mixin links($color, $hover-color) {
   a {

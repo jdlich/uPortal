@@ -183,6 +183,9 @@ input[type='button'] {
 #portalPageBarLinks li {
   border-right: 1px solid rgba(178, 204, 225, 0.25);
 }
+#portalPageBarLinks li:last-child {
+  border: none;
+}
 #portalPageBarLinks a {
   color: #b2cce1;
   text-decoration: none;
