@@ -4,9 +4,6 @@ button {
   line-height: 1;
   margin: 0;
   padding: 7px 10px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #555555;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 12px;
@@ -14,18 +11,39 @@ button {
   text-decoration: none;
   text-transform: capitalize;
   cursor: pointer;
-}
-.button[disabled='disabled'],
-.button[disabled='disabled']:hover,
-button[disabled='disabled'],
-button[disabled='disabled']:hover {
-  background: #dcdcdc;
-  border-color: #a9a9a9;
-  color: #a9a9a9;
-  text-shadow: none;
-  cursor: default;
+  
+  &[disabled='disabled'],
+  &[disabled='disabled']:hover {
+    background: #dcdcdc;
+    border-color: #a9a9a9;
+    color: #a9a9a9;
+    text-shadow: none;
+    cursor: default;
+  }
 }
 
-input[type='submit'] {
-  @extend .button;
+// For example of the toolbar button, see Cache Manager
+.portlet .toolbar .button,
+.portlet .toolbar a.button {
+	border-color:#ccc;
+	background-color:#e2e8e7;
+	background-image:-webkit-gradient(linear, 0% 0%, 0% 50%, from(#e2e8e7), to(#fff)); 
+	background-image:-moz-linear-gradient(0% 50% 90deg, #e2e8e7, #fff);
+	color:#555 !important;
+	text-shadow:none;
+}
+.portlet .toolbar .button:hover,
+.portlet .toolbar .button:focus,
+.portlet .toolbar a.button:hover,
+.portlet .toolbar a.button:focus,
+.portlet .toolbar input[type="submit"]:hover,
+.portlet .toolbar input[type="submit"]:focus,
+.portlet .toolbar input[type="button"]:hover,
+.portlet .toolbar input[type="button"]:focus {
+	border-color:#000;
+	background-color:#666;
+  background-image:-webkit-gradient(linear, 0% 0%, 0% 50%, from(#666), to(#999)); 
+  background-image:-moz-linear-gradient(0% 50% 90deg, #666, #999);
+	color:#fff !important;
+	text-shadow:0 -1px 1px rgba(0,0,0,.5); 
 }
